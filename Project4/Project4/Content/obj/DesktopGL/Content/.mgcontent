@@ -4,16 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/Background.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/character.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/ContinueButton.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/head.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/MenuButton.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/OptionsButton.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/Paused.jpg</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/PlayButton.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/QuitButton.png</File>
-    <File>C:/Users/rstob/source/repos/Project4/Project4/Content/ResumeButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/Background.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/character.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/ContinueButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/head.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/MenuButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/OptionsButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/Paused.jpg</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/PlayButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/QuitButton.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/ResumeButton.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

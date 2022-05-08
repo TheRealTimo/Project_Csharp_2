@@ -33,9 +33,9 @@ namespace Project4
         bool down;
         public bool isClickedDown;
 
-        public Button() 
+        public Button(GraphicsDevice graphics) 
         {
-        
+            size = new Vector2(graphics.Viewport.Width / 10, graphics.Viewport.Height / 20);
         }
 
         public void Load(Texture2D newTexture, Vector2 newPosition)

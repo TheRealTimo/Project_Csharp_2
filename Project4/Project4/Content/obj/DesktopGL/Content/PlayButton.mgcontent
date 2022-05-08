@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/rstob/source/repos/Project4/Project4/Content/PlayButton.png</SourceFile>
-  <SourceTime>2022-05-08T15:34:35.9935601+02:00</SourceTime>
-  <DestFile>C:/Users/rstob/source/repos/Project4/Project4/Content/bin/DesktopGL/Content/PlayButton.xnb</DestFile>
-  <DestTime>2022-05-08T15:40:07.9875704+02:00</DestTime>
+  <SourceFile>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/PlayButton.png</SourceFile>
+  <SourceTime>2022-05-08T16:56:10.1542722+02:00</SourceTime>
+  <DestFile>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/bin/DesktopGL/Content/PlayButton.xnb</DestFile>
+  <DestTime>2022-05-08T16:57:06.99719+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

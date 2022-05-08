@@ -92,9 +92,9 @@ namespace Project4
             pausedTexture = Content.Load<Texture2D>("paused");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
 
-            btnContinue = new Button();
+            btnContinue = new Button(_graphics.GraphicsDevice);
             btnContinue.Load(Content.Load<Texture2D>("QuitButton"), new Vector2(350, 275));
-            btnQuit = new Button();
+            btnQuit = new Button(_graphics.GraphicsDevice);
             btnQuit.Load(Content.Load<Texture2D>("QuitButton"), new Vector2(350, 275));
             #endregion
 
@@ -184,12 +184,19 @@ namespace Project4
             }
             #endregion
 
+            if(paused)
+            {
+                btnQuit.Update(mouse);
+                btnContinue.Update(mouse);
+            }
+
             base.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+
 
             // TODO: Add your drawing code here
 

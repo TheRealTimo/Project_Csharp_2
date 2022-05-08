@@ -32,9 +32,19 @@ namespace Project4
 
         bool down;
         public bool isClickedDown;
+        public cButton()
+        {
+
+        }
+
+        public void Load(Texture2D newTexture, Vector2 newPosition)
+        {
+            texture = newTexture;
+            position = newPosition;
+        }
         public void Update(MouseState mouse)
         {
-            rectangle = new Rectangle((int)position.X, (int)position.Y, (int)size.X,(int)size.Y);
+            rectangle = new Rectangle((int)(position.X - size.X / 2), (int)(position.Y - size.Y / 2), (int)size.X,(int)size.Y);
 
 
             Rectangle mouseRectangle = new Rectangle(mouse.X, mouse.Y, 1, 1);
