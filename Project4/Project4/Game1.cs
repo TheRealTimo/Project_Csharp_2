@@ -29,14 +29,8 @@ namespace Project4
         }
 
         GameState CurrentGameState = GameState.MainMenu;
-        //screen adjustments (tutorial)
-        
-        int screenWidth = 1920; //800 in tut vid
-        int screenHeight = 1080; //600 in tut vid         
 
-
-        cButton btnPlay;
-        Button btnContinue, btnQuit;
+        cButton btnPlay, btnContinue, btnQuit;
 
         public Game1()
         {
@@ -77,14 +71,11 @@ namespace Project4
 
             // TODO: use this.Content to load your game content here
 
-            // screen stuffstuffs
-            // graphics.PreferredBackBufferWidth = screenWidth;
-            // graphics.PreferredBackBufferHeight = screenHeight;
 
             IsMouseVisible = true;
 
             #region playbutton main menu
-            btnPlay = new cButton(Content.Load<Texture2D>("PlayButton"), _graphics.GraphicsDevice);
+            btnPlay = new cButton(Content.Load<Texture2D>("PlayButton2"), _graphics.GraphicsDevice);
             btnPlay.setPosition(new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2));
             #endregion
 
@@ -92,31 +83,19 @@ namespace Project4
             pausedTexture = Content.Load<Texture2D>("paused");
             pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
 
-            btnContinue = new Button(_graphics.GraphicsDevice);
-            btnContinue.Load(Content.Load<Texture2D>("QuitButton"), new Vector2(350, 275));
-            btnQuit = new Button(_graphics.GraphicsDevice);
-            btnQuit.Load(Content.Load<Texture2D>("QuitButton"), new Vector2(350, 275));
-            #endregion
 
-
-            #region pause menu v1
-            /*
-            pausedTexture = Content.Load<Texture2D>("Paused");
-            pausedRectangle = new Rectangle(0, 0, pausedTexture.Width, pausedTexture.Height);
             btnContinue = new cButton(Content.Load<Texture2D>("ContinueButton"), _graphics.GraphicsDevice);
-            btnContinue.setPosition(new Vector2( _graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2));
-            btnQuit = new cButton(Content.Load<Texture2D>("QuitButton"), _graphics.GraphicsDevice);
-            btnQuit.setPosition(new Vector2( _graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2));
-            */
-            #endregion
+            btnContinue.setPosition(new Vector2(1000, 500));
 
+            btnQuit = new cButton(Content.Load<Texture2D>("QuitButton"), _graphics.GraphicsDevice);
+            btnQuit.setPosition(new Vector2(1000, 750));
+
+            #endregion
         }
 
         protected override void Update(GameTime gameTime)
         {
-           
-
-            #region movement
+                       #region movement
 
             var kstate = Keyboard.GetState();
 
@@ -151,9 +130,9 @@ namespace Project4
             #region activate pause state
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
+                Exit();            
 
-            MouseState mouse = Mouse.GetState();
+                MouseState mouse = Mouse.GetState();
 
             if (!paused) 
             {
