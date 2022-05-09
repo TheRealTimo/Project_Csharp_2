@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Project4.Content;
+using Project4.Content.States;
 
 namespace Project4
 {
@@ -10,6 +12,15 @@ namespace Project4
         private SpriteBatch _spriteBatch;
         private Texture2D _characterTexture;
 
+        private State _currentState;
+
+        private State _nextState;
+
+        public void ChangeState(State state)
+        {
+            _nextState = state;
+        }
+
         Vector2 characterPosition;
         float characterSpeed;
 
@@ -17,9 +28,8 @@ namespace Project4
         bool paused = false;
         Texture2D pausedTexture;
         Rectangle pausedRectangle;
-        
-
         #endregion
+
 
         enum GameState 
         { 
@@ -91,6 +101,8 @@ namespace Project4
             btnQuit.setPosition(new Vector2(1000, 750));
 
             #endregion
+
+            _currentState = new MenuState(this, GraphicsDevice, Content);
         }
 
         protected override void Update(GameTime gameTime)
@@ -127,10 +139,20 @@ namespace Project4
             #endregion
             // TODO: Add your update logic here
 
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+
+                _nextState = null;
+            }
+
+            _currentState.Update(gameTime);
+
+            _currentState.PostUpdate(gameTime);
+
             #region activate pause state
 
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();            
+      
 
                 MouseState mouse = Mouse.GetState();
 
@@ -178,6 +200,8 @@ namespace Project4
 
 
             // TODO: Add your drawing code here
+
+            _currentState.Draw(gameTime, _spriteBatch);
 
             _spriteBatch.Begin();
             #region draw character

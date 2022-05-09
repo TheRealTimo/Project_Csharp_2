@@ -32,9 +32,18 @@ namespace Project4
 
         bool down;
         public bool isClickedDown;
+        private Texture2D buttonTexture;
+
+        public Vector2 Position { get; internal set; }
+
         public cButton()
         {
 
+        }
+
+        public cButton(Texture2D buttonTexture)
+        {
+            this.buttonTexture = buttonTexture;
         }
 
         public void Load(Texture2D newTexture, Vector2 newPosition)
