@@ -57,3 +57,4 @@ C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\BattleGame2D\BattleGame2D\b
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\BattleGame2D\BattleGame2D\bin\Debug\netcoreapp3.1\Content\background.xnb
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\BattleGame2D\BattleGame2D\bin\Debug\netcoreapp3.1\Content\ConflictPixelLogo.xnb
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\BattleGame2D\BattleGame2D\bin\Debug\netcoreapp3.1\Content\Loadingbackground.xnb
+C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\BattleGame2D\BattleGame2D\bin\Debug\netcoreapp3.1\Content\ConflictPixelTinyLogo.xnb

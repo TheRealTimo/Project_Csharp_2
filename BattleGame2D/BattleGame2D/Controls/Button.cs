@@ -55,7 +55,7 @@ namespace BattleGame2D.Controls
 
       _font = font;
 
-      PenColour = Color.Black;
+      PenColour = Color.White;
     }
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)

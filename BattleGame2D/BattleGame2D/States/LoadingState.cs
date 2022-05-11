@@ -24,8 +24,8 @@ namespace BattleGame2D.States
             this.timer = 0;
             this.graphics = graphics;
             this.nextState = nextState;
-            this.titleCard = _content.Load<Texture2D>("ConflictPixelLogo");
-            this.titlePosition = new Vector2(graphics.PreferredBackBufferWidth/10, graphics.PreferredBackBufferHeight/8);
+            this.titleCard = _content.Load<Texture2D>("ConflictPixelTinyLogo");
+            this.titlePosition = new Vector2((int)(graphics.PreferredBackBufferWidth*1.45),(int)(graphics.PreferredBackBufferHeight*1.5));
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
