@@ -4,10 +4,18 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Gebruiker/source/repos/BattleGame2D/BattleGame2D/Content/Controls/Button.PNG</File>
-    <File>C:/Users/Gebruiker/source/repos/BattleGame2D/BattleGame2D/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/background.png</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/ConflictPixelLogo.png</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/Controls/Button.PNG</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/Controls/PlayButton.png</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/Fonts/Font.spritefont</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/BattleGame2D/BattleGame2D/Content/Loadingbackground.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

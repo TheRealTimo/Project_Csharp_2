@@ -10,27 +10,45 @@ using BattleGame2D.Controls;
 
 namespace BattleGame2D.States
 {
+   
   public class MenuState : State
   {
     private List<Component> _components;
 
-    public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content) 
+        private int bufferWidth;
+        private int bufferHeight;
+        GraphicsDeviceManager graphics;
+
+        Texture2D titleCard;
+        Vector2 titlePosition;
+
+
+    public MenuState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, int bufferWidth, int bufferHeight, GraphicsDeviceManager graphics) 
       : base(game, graphicsDevice, content)
     {
-      var buttonTexture = _content.Load<Texture2D>("Controls/Button");
-      var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+        this.bufferWidth = bufferWidth;
+        this.bufferHeight = bufferHeight;
+            this.graphics = graphics;
+            titleCard = _content.Load<Texture2D>("ConflictPixelLogo");
+            titlePosition = new Vector2((int)(bufferWidth/3.2), bufferHeight/10);
+            var buttonTexture = _content.Load<Texture2D>("Controls/PlayButton");
+        var buttonFont = _content.Load<SpriteFont>("Fonts/Font");
+            int width = (int)(this.bufferWidth / 1.35);
+            int height = this.bufferHeight;
 
-      var newGameButton = new Button(buttonTexture, buttonFont)
-      {
-        Position = new Vector2(10, 10),
-        Text = "Play Now",
+            
+
+            var playButton = new Button(buttonTexture, buttonFont)
+        {
+            Position = new Vector2((int)(width / 3.3), height/2),
+        Text = "PLAY NOW"
       };
 
-      newGameButton.Click += NewGameButton_Click;
+      playButton.Click += NewGameButton_Click;
 
       var loadGameButton = new Button(buttonTexture, buttonFont)
       {
-        Position = new Vector2(150, 250),
+        Position = new Vector2(width, (int)(height / 2)),
         Text = "Settings",
       };
 
@@ -38,7 +56,7 @@ namespace BattleGame2D.States
 
       var quitGameButton = new Button(buttonTexture, buttonFont)
       {
-        Position = new Vector2(310, 500),
+        Position = new Vector2((int)(width * 1.7), (int)(height / 2)),
         Text = "Quit Game",
       };
 
@@ -46,7 +64,7 @@ namespace BattleGame2D.States
 
       _components = new List<Component>()
       {
-        newGameButton,
+        playButton,
         loadGameButton,
         quitGameButton,
       };
@@ -54,10 +72,10 @@ namespace BattleGame2D.States
 
     public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
     {
-      
-      spriteBatch.Begin();
 
-      foreach (var component in _components)
+            //spriteBatch.Begin();
+            spriteBatch.Draw(titleCard, titlePosition, Color.White);
+            foreach (var component in _components)
         component.Draw(gameTime, spriteBatch);
 
       spriteBatch.End();
@@ -65,7 +83,7 @@ namespace BattleGame2D.States
 
     private void LoadGameButton_Click(object sender, EventArgs e)
     {
-      Console.WriteLine("Load Game");
+      _game.ChangeState(new LoadingState(_game, _graphicsDevice, _content, bufferWidth, bufferHeight, graphics));
     }
 
     private void NewGameButton_Click(object sender, EventArgs e)

@@ -22,7 +22,7 @@ namespace BattleGame2D
       _nextState = state;
     }
 
-    public Game1()
+        public Game1()
     {
       graphics = new GraphicsDeviceManager(this);
       Content.RootDirectory = "Content";
@@ -41,6 +41,7 @@ namespace BattleGame2D
       base.Initialize();
     }
 
+
     /// <summary>
     /// LoadContent will be called once per game and is the place to load
     /// all of your content.
@@ -50,7 +51,8 @@ namespace BattleGame2D
       // Create a new SpriteBatch, which can be used to draw textures.
       spriteBatch = new SpriteBatch(GraphicsDevice);
 
-      _currentState = new MenuState(this, graphics.GraphicsDevice, Content);
+      _currentState = new MenuState(this, graphics.GraphicsDevice, Content, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, graphics);
+
     }
 
     /// <summary>
@@ -89,13 +91,18 @@ namespace BattleGame2D
     /// <param name="gameTime">Provides a snapshot of timing values.</param>
     protected override void Draw(GameTime gameTime)
     {
+            spriteBatch.Begin();
+            spriteBatch.Draw(Content.Load<Texture2D>("background"), new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
+            //spriteBatch.End();  
+
             //Changing screen size
-            graphics.PreferredBackBufferWidth = 1200;
-            graphics.PreferredBackBufferHeight = 800;
+            graphics.PreferredBackBufferWidth = 1580;
+            graphics.PreferredBackBufferHeight = 853;
             graphics.ApplyChanges();
             GraphicsDevice.Clear(Color.WhiteSmoke);
+            //spriteBatch.Begin();
 
-      _currentState.Draw(gameTime, spriteBatch);
+            _currentState.Draw(gameTime, spriteBatch);
 
       base.Draw(gameTime);
     }
