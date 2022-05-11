@@ -104,3 +104,4 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\Project4\Project4\obj\Debug\net
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\Project4\Project4\obj\Debug\netcoreapp3.1\Project4.genruntimeconfig.cache
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\Project4\Project4\bin\Debug\netcoreapp3.1\Project4.pdb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\Project4\Project4\bin\Debug\netcoreapp3.1\Content\PlayButton2.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\Project4\Project4\bin\Debug\netcoreapp3.1\Content\CharOneSprite.xnb

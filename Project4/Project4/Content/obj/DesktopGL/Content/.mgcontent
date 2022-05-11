@@ -6,6 +6,7 @@
   <SourceFiles>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/Background.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/character.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/CharOneSprite.jpeg</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/ContinueButton.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/head.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/MenuButton.png</File>
@@ -17,6 +18,7 @@
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/Project4/Project4/Content/ResumeButton.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -41,6 +41,7 @@ namespace Project4
         GameState CurrentGameState = GameState.MainMenu;
 
         cButton btnPlay, btnContinue, btnQuit;
+        private Texture2D charaset;
 
         public Game1()
         {
@@ -80,7 +81,6 @@ namespace Project4
             _characterTexture = Content.Load< Texture2D > ("character");
 
             // TODO: use this.Content to load your game content here
-
 
             IsMouseVisible = true;
 
@@ -124,7 +124,7 @@ namespace Project4
                 characterPosition.X += characterSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             #endregion
-
+            
             #region confine to screen
 
             if (characterPosition.X > _graphics.PreferredBackBufferWidth - _characterTexture.Width / 2)
@@ -158,7 +158,7 @@ namespace Project4
 
             if (!paused) 
             {
-                if(Keyboard.GetState().IsKeyDown(Keys.Enter))
+                if(Keyboard.GetState().IsKeyDown(Keys.Escape))
                 {
                     paused = true;
                     btnPlay.isClickedDown = false;
@@ -167,7 +167,7 @@ namespace Project4
                 {
                     if (btnPlay.isClickedDown)
                         paused = false;
-                    if (btnQuit.isClickedDown)
+                    if (btnQuit.isClickedDown == true)
                         Exit();
                 }
             }
