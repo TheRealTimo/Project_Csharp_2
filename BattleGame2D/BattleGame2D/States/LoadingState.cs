@@ -11,19 +11,21 @@ namespace BattleGame2D.States
 {
     public class LoadingState : State
     {
-        private int bufferWidth;
-        private int bufferHeight;
-        GraphicsDeviceManager graphics;
-        Texture2D titleCard;
-        Vector2 titlePosition;
-        public LoadingState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, int bufferWidth, int bufferHeight, GraphicsDeviceManager graphics)
+        int COUNTER = 250;
+
+        int timer;
+        private GraphicsDeviceManager graphics;
+        private Texture2D titleCard;
+        private Vector2 titlePosition;
+        private State nextState;
+        public LoadingState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager graphics, State nextState)
           : base(game, graphicsDevice, content)
         {
-            this.bufferWidth = bufferWidth;
-            this.bufferHeight = bufferHeight;
+            this.timer = 0;
             this.graphics = graphics;
+            this.nextState = nextState;
             this.titleCard = _content.Load<Texture2D>("ConflictPixelLogo");
-            this.titlePosition = new Vector2(bufferWidth, bufferHeight);
+            this.titlePosition = new Vector2(graphics.PreferredBackBufferWidth/10, graphics.PreferredBackBufferHeight/8);
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -41,7 +43,16 @@ namespace BattleGame2D.States
 
         public override void Update(GameTime gameTime)
         {
+            timer++;
+            if (timer == COUNTER)
+            {
+                ChangeState();
+            }
+        }
 
+        private void ChangeState()
+        {
+            _game.ChangeState(nextState);
         }
     }
 }

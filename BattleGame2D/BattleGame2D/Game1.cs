@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using BattleGame2D.States;
+using System;
 
 namespace BattleGame2D
 {
@@ -14,6 +15,7 @@ namespace BattleGame2D
     SpriteBatch spriteBatch;
 
     private State _currentState;
+    private State menuState;
 
     private State _nextState;
 
@@ -36,9 +38,9 @@ namespace BattleGame2D
     /// </summary>
     protected override void Initialize()
     {
-      IsMouseVisible = true;
+        IsMouseVisible = true;
 
-      base.Initialize();
+        base.Initialize();
     }
 
 
@@ -50,8 +52,9 @@ namespace BattleGame2D
     {
       // Create a new SpriteBatch, which can be used to draw textures.
       spriteBatch = new SpriteBatch(GraphicsDevice);
+      menuState = new MenuState(this, graphics.GraphicsDevice, Content, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, graphics);
 
-      _currentState = new MenuState(this, graphics.GraphicsDevice, Content, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight, graphics);
+      _currentState = new LoadingState(this, graphics.GraphicsDevice, Content, graphics, menuState);
 
     }
 
@@ -91,7 +94,15 @@ namespace BattleGame2D
     /// <param name="gameTime">Provides a snapshot of timing values.</param>
     protected override void Draw(GameTime gameTime)
     {
-            spriteBatch.Begin();
+            try { 
+                spriteBatch.Begin();
+            }
+            catch (Exception e)
+            {
+                spriteBatch.End();
+                spriteBatch.Begin();
+            }
+            
             spriteBatch.Draw(Content.Load<Texture2D>("background"), new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
             //spriteBatch.End();  
 
@@ -104,7 +115,7 @@ namespace BattleGame2D
 
             _currentState.Draw(gameTime, spriteBatch);
 
-      base.Draw(gameTime);
+            base.Draw(gameTime);
     }
   }
 }

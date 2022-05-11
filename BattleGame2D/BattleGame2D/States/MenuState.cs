@@ -46,13 +46,13 @@ namespace BattleGame2D.States
 
       playButton.Click += NewGameButton_Click;
 
-      var loadGameButton = new Button(buttonTexture, buttonFont)
+      var settingsButton = new Button(buttonTexture, buttonFont)
       {
         Position = new Vector2(width, (int)(height / 2)),
         Text = "Settings",
       };
 
-      loadGameButton.Click += LoadGameButton_Click;
+      settingsButton.Click += SettingsButton_Click;
 
       var quitGameButton = new Button(buttonTexture, buttonFont)
       {
@@ -65,7 +65,7 @@ namespace BattleGame2D.States
       _components = new List<Component>()
       {
         playButton,
-        loadGameButton,
+        settingsButton,
         quitGameButton,
       };
     }
@@ -81,9 +81,9 @@ namespace BattleGame2D.States
       spriteBatch.End();
     }
 
-    private void LoadGameButton_Click(object sender, EventArgs e)
+    private void SettingsButton_Click(object sender, EventArgs e)
     {
-      _game.ChangeState(new LoadingState(_game, _graphicsDevice, _content, bufferWidth, bufferHeight, graphics));
+
     }
 
     private void NewGameButton_Click(object sender, EventArgs e)
