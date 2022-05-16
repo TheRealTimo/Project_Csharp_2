@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Project4.Content;
 using Project4.Content.States;
+using System.Threading.Tasks;
 
 namespace Project4
 {
@@ -12,7 +13,11 @@ namespace Project4
         private SpriteBatch _spriteBatch;
         private Texture2D _characterTexture;
 
+        Task _backgroundTask;
+
         private State _currentState;
+
+        private MenuState _menuState;
 
         private State _nextState;
 
@@ -36,9 +41,10 @@ namespace Project4
             MainMenu,
             Pause,
             Playing,
+            Loading,
         }
 
-        GameState CurrentGameState = GameState.MainMenu;
+        GameState CurrentGameState = GameState.Loading;
 
         cButton btnPlay, btnContinue, btnQuit;
         private Texture2D charaset;
@@ -75,6 +81,11 @@ namespace Project4
             base.Initialize();
         }
 
+        public void BuildMenuState()
+        {
+            _menuState = new MenuState(this, GraphicsDevice, Content);
+        }
+
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -102,7 +113,10 @@ namespace Project4
 
             #endregion
 
-            _currentState = new MenuState(this, GraphicsDevice, Content);
+            _backgroundTask = new Task(this.BuildMenuState);
+            _backgroundTask.Start();
+            // Main thread builds splashscreen
+            _currentState = new LoadingState(this, _graphics.GraphicsDevice, Content, _graphics);
         }
 
         protected override void Update(GameTime gameTime)
@@ -138,6 +152,12 @@ namespace Project4
                 characterPosition.Y = _characterTexture.Height / 2;
             #endregion
             // TODO: Add your update logic here
+            if (_backgroundTask.IsCompleted)
+            {
+                _backgroundTask.Dispose();
+                CurrentGameState = GameState.MainMenu;
+                _nextState = _menuState;
+            }
 
             if (_nextState != null)
             {
@@ -229,6 +249,11 @@ namespace Project4
                     break;
 
                 case GameState.Playing:
+                    break;
+
+                case GameState.Loading:
+                    _spriteBatch.Draw(Content.Load<Texture2D>("Loadingbackground"), new Rectangle(0, 0, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight), Color.White);
+                    _spriteBatch.Draw(Content.Load<Texture2D>("ConflictPixelTinyLogo"), new Vector2((int)(_graphics.PreferredBackBufferWidth * 1.45), (int)(_graphics.PreferredBackBufferHeight * 1.5)), Color.White);
                     break;
             }
 
