@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SFxS0/VhixfoviFJdkcfUakSmAI+azc5SOUOytKLR/41GZymX+WUfVcaP34aeGop2sFz16UOhOJrViwhO3yjtg==",
+  "dgSpecHash": "7sN+GlX50juw0JK6ib3vPlT4IfekFIRf7M3gJRZghatmxfcT52NiH+fYldneEMUuTsxgaHSpaWm6bPf3hsDK/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\C#\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Desktop\\Project_Csharp_2\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
