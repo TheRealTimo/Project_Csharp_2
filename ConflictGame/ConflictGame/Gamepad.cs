@@ -32,7 +32,7 @@ namespace ConflictGame
             return currentGamePadState.IsButtonDown(button) && !previousGamePadState.IsButtonDown(button);
         }
 
-        
+        //Checks if a button has been pressen and then released
         public static bool HasBeenPressed(Buttons button)
         {
             return currentGamePadState.IsButtonUp(button) && previousGamePadState.IsButtonDown(button);
