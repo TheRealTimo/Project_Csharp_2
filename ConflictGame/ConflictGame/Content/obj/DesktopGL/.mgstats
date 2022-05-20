@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ball.png","C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/bin/DesktopGL/ball.xnb","TextureProcessor","Texture2DContent",8368,16469,0,1325152
+"C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/gerjan.png","C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/bin/DesktopGL/gerjan.xnb","TextureProcessor","Texture2DContent",15673,230485,0,016604
