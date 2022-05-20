@@ -4,10 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelLogo.png</File>
     <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelTinyLogo.png</File>
     <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Loadingbackground.jpg</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

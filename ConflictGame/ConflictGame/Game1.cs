@@ -58,7 +58,7 @@ namespace ConflictGame
         {
             // field for backround task to be done while splashscreen is displayed
             gameState = new GameState(this, _graphics.GraphicsDevice, Content, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-            backgroundTask.Wait(1500);
+            backgroundTask.Wait(2500);
         }
 
         protected override void Update(GameTime gameTime)

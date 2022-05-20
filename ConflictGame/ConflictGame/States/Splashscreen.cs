@@ -18,14 +18,14 @@ namespace ConflictGame.States
           : base(game, graphicsDevice, content)
         {
             this.graphics = graphics;
-            this.titleCard = _content.Load<Texture2D>("ConflictPixelTinyLogo");
-            this.titlePosition = new Vector2((int)(graphics.PreferredBackBufferWidth*1.45),(int)(graphics.PreferredBackBufferHeight*1.5));
+            this.titleCard = _content.Load<Texture2D>("ConflictPixelLogo");
+            this.titlePosition = new Vector2((int)(graphics.PreferredBackBufferWidth / 4.5), (int)(graphics.PreferredBackBufferHeight / 3));
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(_content.Load<Texture2D>("Loadingbackground"), new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-
+           
+           graphics.GraphicsDevice.Clear(Color.Black);
             spriteBatch.Draw(titleCard, titlePosition, Color.White);
             spriteBatch.End();
         }
