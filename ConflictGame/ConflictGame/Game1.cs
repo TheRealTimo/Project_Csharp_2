@@ -46,20 +46,23 @@ namespace ConflictGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            GamePadCapabilities capabilities = GamePad.GetCapabilities(PlayerIndex.One);
+            PlayerIndex playerindex = PlayerIndex.One;
+            PlayerIndex[] players= new PlayerIndex[] { PlayerIndex.One};
 
-            GamePadState gstate = Gamepad.GetState();
-
-            if(capabilities.HasLeftXThumbStick)
+            foreach (PlayerIndex index in players)
             {
-                ballPosition.X += gstate.ThumbSticks.Left.X * 10.0f;
-            }
+                GamePadCapabilities capabilities = GamePad.GetCapabilities(index);
+                GamePadState gstate = Gamepad.GetState(index);
+                if (capabilities.HasLeftXThumbStick)
+                {
+                    ballPosition.X += gstate.ThumbSticks.Left.X * 10.0f;
+                }
 
-            if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
-            {
-                ballPosition.Y -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (capabilities.HasAButton && Gamepad.HasBeenPressed(Buttons.A))
+                {
+                    ballPosition.Y -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                }
             }
-
 
             if (ballPosition.X > _graphics.PreferredBackBufferWidth - ballTexture.Width / 2) //Checks that the ball cannot leave the game area
                 ballPosition.X = _graphics.PreferredBackBufferWidth - ballTexture.Width / 2;
