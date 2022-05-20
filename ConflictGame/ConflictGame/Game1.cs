@@ -38,7 +38,7 @@ namespace ConflictGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //ballTexture = Content.Load<Texture2D>("ball"); //Specifies the content that has to be loaded in; Remove
-            player = new Character(Content.Load<Texture2D>("head"), new Vector2(50, 50));
+            player = new Character(Content.Load<Texture2D>("head"), new Vector2(50, 50), _graphics);
             // TODO: use this.Content to load your game content here
         }
 
@@ -75,8 +75,6 @@ namespace ConflictGame
                 ballPosition.Y = ballTexture.Height / 2;
             */
 
-            base.Update(gameTime); //Until here
-
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -93,29 +91,17 @@ namespace ConflictGame
             player.Draw(_spriteBatch);
 
             /* Old Ball Texture
-        _spriteBatch.Draw(ballTexture,
-        ballPosition, //Centers the ball position to the center of the png
-        null,
-        Color.White,
-        0f,
-        new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
-        Vector2.One,
-        SpriteEffects.None,
-        0f
-        );
-
-        /* Old Ball Texture
-        _spriteBatch.Draw(ballTexture,
-        ballPosition, //Centers the ball position to the center of the png
-        null,
-        Color.White,
-        0f,
-        new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
-        Vector2.One,
-        SpriteEffects.None,
-        0f
-        );
-        */
+            _spriteBatch.Draw(ballTexture,
+            ballPosition, //Centers the ball position to the center of the png
+            null,
+            Color.White,
+            0f,
+            new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
+            Vector2.One,
+            SpriteEffects.None,
+            0f
+            );
+            */
             _spriteBatch.End();  //Till here
 
             base.Draw(gameTime);

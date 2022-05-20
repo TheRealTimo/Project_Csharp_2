@@ -14,22 +14,19 @@ namespace ConflictGame
         Vector2 position;
         Vector2 velocity;
 
+        private GraphicsDeviceManager _graphics;
+        
+
         bool hasJumped;
 
-        private GraphicsDeviceManager _graphics;
-
-        public Character(Texture2D newTexture, Vector2 newPosition)
+        public Character(Texture2D newTexture, Vector2 newPosition, GraphicsDeviceManager graphics)
         {
+            _graphics = graphics;
             texture = newTexture;
             position = newPosition;
             hasJumped = true;
-        }
 
-        protected void Initialize()
-        {
-            // TODO: Add your initialization logic here
 
-            position = new Vector2(_graphics.PreferredBackBufferWidth / 2, _graphics.PreferredBackBufferHeight / 2);            
         }
 
         public void Update(GameTime gameTime)
@@ -58,7 +55,7 @@ namespace ConflictGame
                 velocity.Y += 0.15f * i;
             }
 
-            if(position.X + texture.Height >= 150)
+            if(position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)
             {
                 hasJumped = false; 
             }
@@ -67,11 +64,32 @@ namespace ConflictGame
             {
                 velocity.Y = 0f;
             }
+
+            if (position.X > _graphics.PreferredBackBufferWidth - texture.Width / 2) //Checks that the ball cannot leave the game area
+                position.X = _graphics.PreferredBackBufferWidth - texture.Width / 2;
+            else if (position.X < texture.Width / 2)
+                position.X = texture.Width / 2;
+
+            if (position.Y > _graphics.PreferredBackBufferHeight - texture.Height / 2)
+                position.Y = _graphics.PreferredBackBufferHeight - texture.Height / 2;
+            else if (position.Y < texture.Height / 2)
+                position.Y = texture.Height / 2;
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(texture, position, Color.White);
+            spriteBatch.Draw(
+                texture,
+                position,
+                null, //source rectangle
+                Color.White,
+                0f, // rotation
+                new Vector2(texture.Width / 2, texture.Height / 2),
+                Vector2.One, //scale
+                SpriteEffects.None,
+                0f // layer depth
+                );
         }
     }
 }
