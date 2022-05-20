@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelTinyLogo.png","C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/bin/DesktopGL/ConflictPixelTinyLogo.xnb","TextureProcessor","Texture2DContent",5797,33133,0.5694284
+"C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Loadingbackground.jpg","C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/bin/DesktopGL/Loadingbackground.xnb","TextureProcessor","Texture2DContent",147405,8294485,0.4613277
