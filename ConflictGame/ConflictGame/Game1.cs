@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -45,19 +46,20 @@ namespace ConflictGame
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            var kstate = Keyboard.GetState();  //From here
+            GamePadCapabilities capabilities = GamePad.GetCapabilities(PlayerIndex.One);
 
-            if (kstate.IsKeyDown(Keys.Up))
+            GamePadState gstate = Gamepad.GetState();
+
+            if(capabilities.HasLeftXThumbStick)
+            {
+                ballPosition.X += gstate.ThumbSticks.Left.X * 10.0f;
+            }
+
+            if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
+            {
                 ballPosition.Y -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
 
-            if (kstate.IsKeyDown(Keys.Down))
-                ballPosition.Y += ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            if (kstate.IsKeyDown(Keys.Left))
-                ballPosition.X -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
-            if (kstate.IsKeyDown(Keys.Right))
-                ballPosition.X += ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if (ballPosition.X > _graphics.PreferredBackBufferWidth - ballTexture.Width / 2) //Checks that the ball cannot leave the game area
                 ballPosition.X = _graphics.PreferredBackBufferWidth - ballTexture.Width / 2;
