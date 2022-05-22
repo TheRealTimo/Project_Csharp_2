@@ -57,10 +57,10 @@ namespace ConflictGame
             playgameText = Content.Load<Texture2D>("playgame");
             bgimage = Content.Load<Texture2D>("Background");
 
-            optionsButton = new Button(new Rectangle(300, 200, optionText.Width, optionText.Height), true);
+            optionsButton = new Button(new Rectangle(200, 550, optionText.Width, optionText.Height), true);
             optionsButton.load(Content, "options");
 
-            playGameButton = new Button(new Rectangle(300, 100, playgameText.Width, playgameText.Height), true);
+            playGameButton = new Button(new Rectangle(250, 300, playgameText.Width, playgameText.Height), true);
             playGameButton.load(Content, "playgame");
 
         }
@@ -130,7 +130,7 @@ namespace ConflictGame
                 case MENU:
                     spriteBatch.Draw(bgimage, new Rectangle(0, 0, bgimage.Width, bgimage.Height), Color.White);
                     spriteBatch.Draw(playgameText, new Rectangle(250, 300, playgameText.Width, playgameText.Height), Color.White);
-                    spriteBatch.Draw(optionText, new Rectangle(200, 600, optionText.Width, optionText.Height), Color.White);
+                    spriteBatch.Draw(optionText, new Rectangle(200, 550, optionText.Width, optionText.Height), Color.White);
                     // spriteBatch.Draw(bgimage, new Rectangle(800, 420, bgimage.Width, bgimage.Height), Color.White);
                     break;
 
