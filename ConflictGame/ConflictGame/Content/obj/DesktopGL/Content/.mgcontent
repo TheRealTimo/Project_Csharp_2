@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Profile>Reach</Profile>
+  <Platform>DesktopGL</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/background.png</File>
+    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/Group 1.png</File>
+    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/option.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File>playgame.png</File>
+    <File>options.png</File>
+  </DestFiles>
+</SourceFileCollection>

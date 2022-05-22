@@ -174,25 +174,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {},
+    "C:\\Users\\kauen\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\C#\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
+      "projectUniqueName": "C:\\Users\\kauen\\OneDrive\\Documents\\GitHub\\New folder\\Project_Csharp_2\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
       "projectName": "ConflictGame",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\C#\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\C#\\ConflictGame\\ConflictGame\\obj\\",
+      "projectPath": "C:\\Users\\kauen\\OneDrive\\Documents\\GitHub\\New folder\\Project_Csharp_2\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
+      "packagesPath": "C:\\Users\\kauen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kauen\\OneDrive\\Documents\\GitHub\\New folder\\Project_Csharp_2\\ConflictGame\\ConflictGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kauen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
