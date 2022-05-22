@@ -73,3 +73,5 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\D
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\Debug\netcoreapp3.1\ConflictGame.pdb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\Debug\netcoreapp3.1\ConflictGame.genruntimeconfig.cache
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\head.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\TempLevelBackground.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Level2.xnb

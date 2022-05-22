@@ -25,8 +25,6 @@ namespace ConflictGame
             texture = newTexture;
             position = newPosition;
             hasJumped = true;
-
-
         }
 
         public void Update(GameTime gameTime)
@@ -52,7 +50,7 @@ namespace ConflictGame
             if (hasJumped == true)
             {
                 float i = 1;
-                velocity.Y += 0.15f * i;
+                velocity.Y += 0.25f * i;
             }
 
             if(position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)

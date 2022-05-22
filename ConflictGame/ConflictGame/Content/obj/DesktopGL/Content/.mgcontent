@@ -6,8 +6,12 @@
   <SourceFiles>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ball.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/head.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Level2.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/TempLevelBackground.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
