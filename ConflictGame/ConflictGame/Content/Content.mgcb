@@ -25,7 +25,7 @@
 /processorParam:TextureFormat=Color
 /build:background.png
 
-#begin Group 1.png
+#begin options.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -35,9 +35,9 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:Group 1.png;playgame.png
+/build:options.png
 
-#begin option.png
+#begin playgame.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -47,5 +47,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:option.png;options.png
+/build:playgame.png
 

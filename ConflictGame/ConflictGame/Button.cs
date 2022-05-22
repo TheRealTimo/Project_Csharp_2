@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Content;
 namespace ConflictGame
 {
     //normal
-    class Button
+    class button
     {
         Rectangle posSize;
         bool clicked;
@@ -18,7 +18,7 @@ namespace ConflictGame
 
 
         //Constructor
-        public Button()
+        public button()
         {
             posSize = new Rectangle(100, 100, 100, 50);
             clicked = false;
@@ -26,7 +26,7 @@ namespace ConflictGame
         }
 
         //OverLoaded Constructor
-        public Button(Rectangle rec, bool avail)
+        public button(Rectangle rec, bool avail)
         {
             posSize = rec;
             available = avail;

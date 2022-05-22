@@ -5,12 +5,12 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/background.png</File>
-    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/Group 1.png</File>
-    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/option.png</File>
+    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/options.png</File>
+    <File>C:/Users/kauen/OneDrive/Documents/GitHub/New folder/Project_Csharp_2/ConflictGame/ConflictGame/Content/playgame.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
-    <File>playgame.png</File>
-    <File>options.png</File>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

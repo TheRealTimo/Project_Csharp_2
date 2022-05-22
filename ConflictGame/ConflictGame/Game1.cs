@@ -24,7 +24,7 @@ namespace ConflictGame
 
         //Variables for the MENU Screen
         Texture2D optionText, playgameText;
-        Button playGameButton, optionsButton;
+        button playGameButton, optionsButton;
         Texture2D bgimage;
 
 
@@ -57,10 +57,10 @@ namespace ConflictGame
             playgameText = Content.Load<Texture2D>("playgame");
             bgimage = Content.Load<Texture2D>("Background");
 
-            optionsButton = new Button(new Rectangle(200, 550, optionText.Width, optionText.Height), true);
+            optionsButton = new button(new Rectangle(200, 550, optionText.Width, optionText.Height), true);
             optionsButton.load(Content, "options");
 
-            playGameButton = new Button(new Rectangle(250, 300, playgameText.Width, playgameText.Height), true);
+            playGameButton = new button(new Rectangle(250, 300, playgameText.Width, playgameText.Height), true);
             playGameButton.load(Content, "playgame");
 
         }
