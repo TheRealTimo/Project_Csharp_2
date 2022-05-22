@@ -25,7 +25,6 @@ namespace ConflictGame
         //Variables for the MENU Screen
         Texture2D optionText, playgameText;
         Button playGameButton, optionsButton;
-        float screenwidth, screenheight;
         Texture2D bgimage;
 
 
@@ -40,8 +39,11 @@ namespace ConflictGame
         protected override void Initialize()
         {
             col = Color.White;
-            screenheight = graphics.GraphicsDevice.Viewport.Height;
-            screenwidth = graphics.GraphicsDevice.Viewport.Width;
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
+            graphics.IsFullScreen = true;
+            graphics.ApplyChanges();
+
             base.Initialize();
         }
 
@@ -127,8 +129,8 @@ namespace ConflictGame
             {
                 case MENU:
                     spriteBatch.Draw(bgimage, new Rectangle(0, 0, bgimage.Width, bgimage.Height), Color.White);
-                    spriteBatch.Draw(playgameText, new Rectangle(100, 100, playgameText.Width, playgameText.Height), Color.White);
-                    spriteBatch.Draw(optionText, new Rectangle(100, 200, optionText.Width, optionText.Height), Color.White);
+                    spriteBatch.Draw(playgameText, new Rectangle(250, 300, playgameText.Width, playgameText.Height), Color.White);
+                    spriteBatch.Draw(optionText, new Rectangle(200, 600, optionText.Width, optionText.Height), Color.White);
                     // spriteBatch.Draw(bgimage, new Rectangle(800, 420, bgimage.Width, bgimage.Height), Color.White);
                     break;
 
