@@ -67,7 +67,8 @@ namespace ConflictGame
             {
                 backgroundTask.Dispose();
                 isLoading = false;
-                _nextState = gameState;
+                
+                _nextState = gameState;     // Change next state to the preffered state after splashscreen
             }
             if (_nextState != null)
             {

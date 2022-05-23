@@ -49,3 +49,5 @@ C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\o
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\ConflictPixelTinyLogo.xnb
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Loadingbackground.xnb
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\ConflictPixelLogo.xnb
+C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
