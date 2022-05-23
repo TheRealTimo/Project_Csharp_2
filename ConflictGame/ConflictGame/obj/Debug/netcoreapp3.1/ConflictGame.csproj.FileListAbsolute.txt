@@ -51,3 +51,5 @@ C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\b
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\ConflictPixelLogo.xnb
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
 C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\3guys.xnb
+C:\Users\Gebruiker\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\wip1-industrial-brick_height.xnb

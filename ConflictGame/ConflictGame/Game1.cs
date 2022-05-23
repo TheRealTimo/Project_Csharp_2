@@ -103,6 +103,10 @@ namespace ConflictGame
             }
             GraphicsDevice.Clear(Color.CornflowerBlue);
             if (isLoading) { splashscreen.Draw(gameTime, _spriteBatch); }
+            else
+            {
+                _currentState.Draw(gameTime, _spriteBatch);
+            }
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);

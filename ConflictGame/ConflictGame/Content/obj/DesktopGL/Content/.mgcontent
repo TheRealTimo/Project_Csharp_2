@@ -4,11 +4,15 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/3guys.PNG</File>
     <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelLogo.png</File>
     <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelTinyLogo.png</File>
     <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Loadingbackground.jpg</File>
+    <File>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/wip1-industrial-brick_height.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
