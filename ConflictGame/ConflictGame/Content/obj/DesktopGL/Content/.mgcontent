@@ -4,6 +4,9 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Azazel.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Azazel2.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Azazel3.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ball.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/BlueBackSqr.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/BlueBackWavy.png</File>
@@ -29,6 +32,9 @@
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Tile4.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

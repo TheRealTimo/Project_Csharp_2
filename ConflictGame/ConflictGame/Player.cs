@@ -11,7 +11,7 @@ namespace ConflictGame
     class Player
     {
         private Texture2D texture;
-        private Vector2 position = new Vector2(64, 384);
+        private Vector2 position = new Vector2(640, 304);
         private Vector2 velocity;
         private Rectangle rectangle;
 
@@ -26,7 +26,7 @@ namespace ConflictGame
 
         public void Load(ContentManager Content)
         {
-            texture = Content.Load<Texture2D>("ball");           
+            texture = Content.Load<Texture2D>("azazel3");           
         }
 
         public void Update(GameTime gameTime)
@@ -36,19 +36,19 @@ namespace ConflictGame
 
             Input(gameTime);
 
-            if (velocity.Y < 10)
+            if (velocity.Y < 100 )
                 velocity.Y += 0.4f;
         }
 
         private void Input(GameTime gameTime)
-        {
+        { 
             if (Keyboard.GetState().IsKeyDown(Keys.Right))
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
             else if (Keyboard.GetState().IsKeyDown(Keys.Left))
-                velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
+                velocity.X = -(float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
             else velocity.X = 0f;
 
-            if(Keyboard.GetState().IsKeyDown(Keys.Up) && hasJumped == false) 
+            if(Keyboard.GetState().IsKeyDown(Keys.Space) && hasJumped == false) 
             {
                 position.Y -= 5f;
                 velocity.Y = -9f;
@@ -58,24 +58,24 @@ namespace ConflictGame
 
         public void Collision(Rectangle newRectangle, int xOffset, int yOffset)
         {
-            if(rectangle.touchTopOf(newRectangle))
+            if(rectangle.TouchTopOf(newRectangle))
             {
                 rectangle.Y = newRectangle.Y - rectangle.Height;
                 velocity.Y = 0f;
                 hasJumped = false;
             }
 
-            if(rectangle.touchLeftOf(newRectangle))
+            if(rectangle.TouchLeftOf(newRectangle))
             {
                 position.X = newRectangle.X - rectangle.Width - 2;
             }
 
-            if(rectangle.touchRightOf(newRectangle))
+            if(rectangle.TouchRightOf(newRectangle))
             {
                 position.X = newRectangle.X + rectangle.Width + 2;
             }
 
-            if(rectangle.touchBottomOf(newRectangle))
+            if(rectangle.TouchBottomOf(newRectangle))
                     velocity.Y = 1f;
 
             if (position.X < 0) position.X = 0;

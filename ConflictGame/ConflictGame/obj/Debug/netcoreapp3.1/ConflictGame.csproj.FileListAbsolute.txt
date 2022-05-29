@@ -94,3 +94,6 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\D
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Tile2.xnb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Tile3.xnb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Tile4.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Azazel.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Azazel2.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Azazel3.xnb
