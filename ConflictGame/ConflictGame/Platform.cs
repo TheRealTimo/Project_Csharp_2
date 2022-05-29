@@ -19,23 +19,30 @@ namespace ConflictGame
         }
 
         //Update
-        public Vector2 Update(Vector2 playerPos, int playerWidth, int playerHeight)
+        public void Update(Character player)
         {
-
-            if(playerPos.X > rectangle.Left - playerWidth / 2 && playerPos.X - playerWidth / 2 < rectangle.Right && playerPos.Y + playerHeight/2 > rectangle.Top && playerPos.Y - playerHeight/2 < rectangle.Bottom)
+            //player.OffPlat();
+            if(player.position.X > rectangle.Left - player.texture.Width / 2 && player.position.X - player.texture.Width / 2 < rectangle.Right && player.position.Y + player.texture.Height / 2 > rectangle.Top && player.position.Y - player.texture.Height /2 < rectangle.Bottom)
             {//Checks if player extends crosses left of platform && Checks if player extends crosses Right of platform && Checks if player extends crosses Top of platform && Checks if player extends crosses Bootom of platform
 
-                if (playerPos.Y < rectangle.Top)                        //checks if player center is above the platform
-                    playerPos.Y = rectangle.Top - playerHeight / 2;
-                else if (playerPos.X < rectangle.Left)                  //checks if player center is above the platform
-                    playerPos.X = rectangle.Left - playerWidth/2;
-                else if (playerPos.Y > rectangle.Bottom)                //checks if player center is above the platform
-                    playerPos.Y = rectangle.Bottom + playerHeight / 2;
-                else                                                    // else player is Right of platform
-                    playerPos.X = rectangle.Right + playerWidth/2;
+                if (player.position.Y < rectangle.Top)
+                {                     //checks if player center is above the platform
+                    player.position.Y = rectangle.Top - player.texture.Height / 2;
+                    player.PlatStand();
+                }
+                else if (player.position.X < rectangle.Left)
+                {                //checks if player center is above the platform
+                    player.position.X = rectangle.Left - player.texture.Width / 2;
+                }
+                else if (player.position.Y > rectangle.Bottom)
+                {     //checks if player center is above the platform
+                    player.position.Y = rectangle.Bottom + player.texture.Height / 2;
+                }
+                else
+                {                         // else player is Right of platform
+                    player.position.X = rectangle.Right + player.texture.Width / 2;
+                }
             }
-            
-            return playerPos;
 
 
         }

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MonoGame.Extended.Content;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Sprites;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
@@ -12,49 +10,60 @@ namespace ConflictGame.States
 {
     public class GameState : State
     {
-        bool jumping;
-        Texture2D ballTexture;  //Loads the texture of the ball in 2D
-        Platform platform;
-        Vector2 ballPosition; //Saves the X and Y axis as vector
-        float ballSpeed;  //RemoveAll
+        //platform creating
+        Platform[] platform;
+
+        //vales for screen size
         private int bufferWidth;
         private int bufferHeight;
-        private float gravity;
-        
 
-        public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, int bufferWidth, int bufferHeight)
+        // Creating player 1
+        Character player;
+
+        //background image
+        private Texture2D _tempBackgroundTexture;
+
+
+        public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager graphics)
           : base(game, graphicsDevice, content)
         {
-            jumping = false;
-            this.bufferWidth = bufferWidth;
-            this.bufferHeight = bufferHeight;
-            ballPosition = new Vector2(bufferWidth / 2, //From here
-            bufferHeight / 2);
-            ballSpeed = 500f;  //Till here
-            ballTexture = content.Load<Texture2D>("3guys");
-            // gravity value
-            this.gravity = 300f;
+            //Values for screen size
+            this.bufferWidth = graphics.PreferredBackBufferWidth;
+            this.bufferHeight = graphics.PreferredBackBufferHeight;
+
             // creating platform with collision handling
-            this.platform = new Platform(content, bufferWidth / 2, bufferHeight / 2, 400, 150);
+            this.platform = new Platform[6] { 
+                new Platform(content, (int)bufferWidth * 0.172, (int)bufferHeight * 0.97, 1260, 35),
+                new Platform(content, (int)bufferWidth * 0.31, (int)bufferHeight * 0.623, 727, 35),
+                new Platform(content, (int)bufferWidth * 0.755, (int)bufferHeight * 0.72, 150, 35),
+                new Platform(content, (int)bufferWidth * 0.17, (int)bufferHeight * 0.72, 150, 35),
+                new Platform(content, (int)bufferWidth * 0.0, (int)bufferHeight * 0.825, 280, 35),
+                new Platform(content, (int)bufferWidth * 0.855, (int)bufferHeight * 0.825, 280, 35)
+            };
+
+            //choosing backround image texture
+            _tempBackgroundTexture = content.Load<Texture2D>("Backgrounds/Level2");
+
+            //creating player character
+            player = new Character(content.Load<Texture2D>("Player/head"), new Vector2(50, 50), graphics);
 
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            //draw player
-            spriteBatch.Draw(ballTexture,
-            ballPosition, //Centers the ball position to the center of the png
-            null,
-            Color.White,
-            0f,
-            new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
-            1,
-            SpriteEffects.None,
-            0f
-            );
+            
+            //draw backround
+            spriteBatch.Draw(_tempBackgroundTexture, new Vector2(0, 0), Color.White);
+
+            //draw player character
+            player.Draw(spriteBatch);
 
             //Draw platform 
-            platform.Draw(gameTime, spriteBatch);
+            foreach(Platform platform in platform)
+            {
+                platform.Draw(gameTime, spriteBatch);
+            }
+            
 
             spriteBatch.End();
         }
@@ -65,46 +74,38 @@ namespace ConflictGame.States
 
         public override void Update(GameTime gameTime)
         {
-            
+            //updating character with gametime
+            player.Update(gameTime);
 
-
-            GamePadCapabilities capabilities = GamePad.GetCapabilities(PlayerIndex.One);
-
-            GamePadState gstate = Gamepad.GetState();
-
-            if (capabilities.HasLeftXThumbStick)
+            //updating the collision detection in platform class with player character
+            foreach (Platform platform in platform)
             {
-                ballPosition.X += gstate.ThumbSticks.Left.X * 10.0f;
+                platform.Update(player);
             }
 
-            if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
+            //Code for more than 1 player
+            PlayerIndex playerindex = PlayerIndex.One;
+            PlayerIndex[] players = new PlayerIndex[] { PlayerIndex.One };
+
+            foreach (PlayerIndex index in players)
             {
-                ballPosition.Y -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-                jumping = true;
+                //Gamepad to player connection
+                GamePadCapabilities capabilities = GamePad.GetCapabilities(PlayerIndex.One);
+
+                //getting gamepad state
+                GamePadState gstate = Gamepad.GetState();
+
+                //Gamepad joystick detection for movment
+                if (capabilities.HasLeftXThumbStick)
+                {
+                    player.position.X += gstate.ThumbSticks.Left.X * 10.0f;//uses the angle of joystick to determine movement speed
+                }
+                //Gamepad A/X button for jumping
+                if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
+                {
+                    player.Jump(); //calls jump function from player
+                }
             }
-            else { jumping = false; }
-
-            //Checks that the ball cannot leave the game area
-            if (ballPosition.X > bufferWidth - ballTexture.Width / 2)
-                ballPosition.X = bufferWidth - ballTexture.Width / 2;
-            else if (ballPosition.X < ballTexture.Width / 2)
-                ballPosition.X = ballTexture.Width / 2;
-
-            if (ballPosition.Y > bufferHeight - ballTexture.Height / 2)
-            {
-                ballPosition.Y = bufferHeight - ballTexture.Height / 2;
-            }
-            else if (ballPosition.Y < ballTexture.Height / 2)
-                ballPosition.Y = ballTexture.Height / 2;
-
-            //checks that the ball collides with platform
-            ballPosition = platform.Update(ballPosition, ballTexture.Width, ballTexture.Height);
-            //Until here
-            if (!jumping)
-            {
-                ballPosition.Y += gravity * (float)gameTime.ElapsedGameTime.TotalSeconds;
-            }
-
         }
     }
 }
