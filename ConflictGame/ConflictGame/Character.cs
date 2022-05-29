@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
@@ -13,7 +14,7 @@ namespace ConflictGame
 
         Vector2 position;
         Vector2 velocity;
-
+        private Rectangle rectangle;
         private GraphicsDeviceManager _graphics;
         
 
@@ -27,6 +28,11 @@ namespace ConflictGame
             hasJumped = true;
         }
 
+
+        public void Load(ContentManager Content)
+        {
+            texture = Content.Load<Texture2D>("head");
+        }
         public void Update(GameTime gameTime)
         {
             position += velocity;
@@ -73,6 +79,34 @@ namespace ConflictGame
             else if (position.Y < texture.Height / 2)
                 position.Y = texture.Height / 2;
 
+        }
+
+        public void Collision(Rectangle newRectangle, int xOffset, int yOffset)
+        {
+            if (rectangle.touchTopOf(newRectangle))
+            {
+                rectangle.Y = newRectangle.Y - rectangle.Height;
+                velocity.Y = 0f;
+                hasJumped = false;
+            }
+
+            if (rectangle.touchLeftOf(newRectangle))
+            {
+                position.X = newRectangle.X - rectangle.Width - 2;
+            }
+
+            if (rectangle.touchRightOf(newRectangle))
+            {
+                position.X = newRectangle.X + rectangle.Width + 2;
+            }
+
+            if (rectangle.touchBottomOf(newRectangle))
+                velocity.Y = 1f;
+
+            if (position.X < 0) position.X = 0;
+            if (position.X > xOffset - rectangle.Width) position.X = xOffset - rectangle.Width;
+            if (rectangle.Y < 0) velocity.Y = 1f;
+            if (position.Y > yOffset - rectangle.Height) position.Y = yOffset - rectangle.Height;
         }
 
         public void Draw(SpriteBatch spriteBatch)
