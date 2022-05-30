@@ -31,16 +31,16 @@ namespace ConflictGame
         {
             position += velocity;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
                 velocity.X = 3f;
 
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            else if (Keyboard.GetState().IsKeyDown(Keys.A))
                 velocity.X = -3f;
 
             else
                 velocity.X = 0f;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Up) && hasJumped == false)
+            if (Keyboard.GetState().IsKeyDown(Keys.W) && hasJumped == false)
             {
                 position.Y -= 10f;
                 velocity.Y = -5f;
