@@ -15,10 +15,10 @@ namespace ConflictGame
         {
         }
 
-        public static GamePadState GetState(PlayerIndex playerindex)
+        public static GamePadState GetState(PlayerIndex index)
         {
             previousGamePadState = currentGamePadState;
-            currentGamePadState = GamePad.GetState(playerindex);
+            currentGamePadState = GamePad.GetState(index); //Alter to have any player index
             return currentGamePadState;
         }
 
@@ -30,12 +30,6 @@ namespace ConflictGame
         public static bool HasNotBeenPressed(Buttons button)
         {
             return currentGamePadState.IsButtonDown(button) && !previousGamePadState.IsButtonDown(button);
-        }
-
-        //Checks if a button has been pressen and then released
-        public static bool HasBeenPressed(Buttons button)
-        {
-            return currentGamePadState.IsButtonUp(button) && previousGamePadState.IsButtonDown(button);
         }
     }
 }

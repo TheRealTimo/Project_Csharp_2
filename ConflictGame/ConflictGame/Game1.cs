@@ -1,18 +1,33 @@
-﻿using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+﻿using ConflictGame.States;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Threading.Tasks;
 
 namespace ConflictGame
 {
     public class Game1 : Game
     {
-        Texture2D ballTexture;  //Loads the texture of the ball in 2D
-        Vector2 ballPosition; //Saves the X and Y axis as vector
-        float ballSpeed;  //RemoveAll
-
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
+        
+        private Task backgroundTask;
+
+        private State _currentState;
+        private State _nextState;
+        private State splashscreen;
+        private State menuState;
+        private State gameState;
+        public void ChangeState(string state)
+        {
+            //changes state based on two letter code
+            switch (state)
+            {
+                case "gs":
+                    _nextState = gameState;
+                    break;
+            }
+        }
 
         public Game1()
         {
@@ -24,10 +39,12 @@ namespace ConflictGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
 
-            ballPosition = new Vector2(_graphics.PreferredBackBufferWidth / 2, //From here
-            _graphics.PreferredBackBufferHeight / 2);
-            ballSpeed = 100f;  //Till here
+            _graphics.IsFullScreen = true;
+
+            _graphics.ApplyChanges();
 
             base.Initialize();
         }
@@ -36,45 +53,41 @@ namespace ConflictGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            ballTexture = Content.Load<Texture2D>("ball"); //Specifies the content that has to be loaded in; Remove
-
-            // TODO: use this.Content to load your game content here
+            backgroundTask = new Task(this.BackgroundTask);
+            backgroundTask.Start();
+            // Main thread builds splashscreen
+            splashscreen = new Splashscreen(this, _graphics.GraphicsDevice, Content, _graphics);
+            _currentState = splashscreen;
+        }
+        public void BackgroundTask()
+        {
+            // field for backround task to be done while splashscreen is displayed
+            gameState = new GameState(this, _graphics.GraphicsDevice, Content, _graphics);
+            menuState = new MenuState(this, _graphics.GraphicsDevice, Content, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
+            backgroundTask.Wait(2500);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
-                Exit();
-
-            PlayerIndex playerindex = PlayerIndex.One;
-            PlayerIndex[] players= new PlayerIndex[] { PlayerIndex.One};
-
-            foreach (PlayerIndex index in players)
+            if (backgroundTask.IsCompleted)
             {
-                GamePadCapabilities capabilities = GamePad.GetCapabilities(index);
-                GamePadState gstate = Gamepad.GetState(index);
-                if (capabilities.HasLeftXThumbStick)
-                {
-                    ballPosition.X += gstate.ThumbSticks.Left.X * 10.0f;
-                }
+                backgroundTask.Dispose();
 
-                if (capabilities.HasAButton && Gamepad.HasBeenPressed(Buttons.A))
-                {
-                    ballPosition.Y -= ballSpeed * (float)gameTime.ElapsedGameTime.TotalSeconds;
-                }
+                ChangeState("gs");     // Change next state to the preffered state after splashscreen
+            }
+            if (_nextState != null)
+            {
+                _currentState = _nextState;
+
+                _nextState = null;
             }
 
-            if (ballPosition.X > _graphics.PreferredBackBufferWidth - ballTexture.Width / 2) //Checks that the ball cannot leave the game area
-                ballPosition.X = _graphics.PreferredBackBufferWidth - ballTexture.Width / 2;
-            else if (ballPosition.X < ballTexture.Width / 2)
-                ballPosition.X = ballTexture.Width / 2;
+            _currentState.Update(gameTime);
 
-            if (ballPosition.Y > _graphics.PreferredBackBufferHeight - ballTexture.Height / 2)
-                ballPosition.Y = _graphics.PreferredBackBufferHeight - ballTexture.Height / 2;
-            else if (ballPosition.Y < ballTexture.Height / 2)
-                ballPosition.Y = ballTexture.Height / 2;
+            _currentState.PostUpdate(gameTime);
 
-            base.Update(gameTime); //Until here
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
 
             // TODO: Add your update logic here
 
@@ -83,22 +96,19 @@ namespace ConflictGame
 
         protected override void Draw(GameTime gameTime)
         {
+            // ensures that any previous spritebatch begins are ended if any
+            try
+            {
+                _spriteBatch.Begin();
+            }
+            catch (System.Exception e)
+            {
+                _spriteBatch.End();
+                _spriteBatch.Begin();
+            }
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            _currentState.Draw(gameTime, _spriteBatch);
             // TODO: Add your drawing code here
-
-            _spriteBatch.Begin();  //From here
-            _spriteBatch.Draw(ballTexture,
-            ballPosition, //Centers the ball position to the center of the png
-            null,
-            Color.White,
-            0f,
-            new Vector2(ballTexture.Width / 2, ballTexture.Height / 2),
-            Vector2.One,
-            SpriteEffects.None,
-            0f
-            );
-            _spriteBatch.End();  //Till here
 
             base.Draw(gameTime);
         }
