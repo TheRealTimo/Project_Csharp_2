@@ -4,10 +4,60 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/3guys.PNG</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/background.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Backgrounds/Level2.png</File>
     <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ball.png</File>
-    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/gerjan.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/BlueBackSqr.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/BlueBackWavy.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelLogo.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/ConflictPixelTinyLogo.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Font.spritefont</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBackSqr.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GrEyBackWavy.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttn.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttnBack.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttnQuit.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Loadingbackground.jpg</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/options.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Player/head.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/playgame.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBackSqr.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBackWavy.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBttn.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBttnBack.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBttnExtra.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBttnOptions.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/RedBttnQuit.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/TempLevelBackground.png</File>
+    <File>C:/Users/sikor/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/wip1-industrial-brick_height.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

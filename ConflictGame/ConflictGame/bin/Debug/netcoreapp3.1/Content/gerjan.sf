@@ -6,7 +6,7 @@
   },
   "cycles": {
     "punch": {
-      "frames": [0,1,2,3,4,5,6,7,8],
+      "frames": [0,1,2,3,4,3,2,1],
       "isLooping": false,
       "frameDuration": 0.1
     },
@@ -21,8 +21,13 @@
       "frameDuration": 0.2
     },
     "runleft": {
-      "frames": [31,30,29,28,27,26,25,24],
+      "frames": [24,25,26,27,28,29,30,31],
       "isLooping": true,
+      "frameDuration": 0.2
+    },
+    "jump": {
+      "frames": [48,49,50,51,52,52,51,50,49,48],
+      "isLooping": false,
       "frameDuration": 0.2
     }
   }
