@@ -18,6 +18,13 @@ namespace ConflictGame
         private State splashscreen;
         private State menuState;
         private State gameState;
+
+        //health bar
+        Texture2D healthTexture;
+        Rectangle healthRectangle;
+        private Vector2 healthPosition;
+
+
         public void ChangeState(string state)
         {
             //changes state based on two letter code
@@ -58,6 +65,10 @@ namespace ConflictGame
             // Main thread builds splashscreen
             splashscreen = new Splashscreen(this, _graphics.GraphicsDevice, Content, _graphics);
             _currentState = splashscreen;
+
+            healthTexture = Content.Load<Texture2D>("HealthBar");
+            healthPosition = new Vector2(50, 30);
+            healthRectangle = new Rectangle(0, 0, healthTexture.Width, healthTexture.Height);
         }
         public void BackgroundTask()
         {
@@ -83,7 +94,8 @@ namespace ConflictGame
             }
 
             _currentState.Update(gameTime);
-
+            
+            
             _currentState.PostUpdate(gameTime);
 
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))

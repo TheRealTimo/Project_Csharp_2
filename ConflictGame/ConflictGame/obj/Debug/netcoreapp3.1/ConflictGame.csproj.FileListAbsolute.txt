@@ -181,3 +181,11 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\D
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\Debug\netcoreapp3.1\ConflictGame.dll
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\Debug\netcoreapp3.1\ConflictGame.pdb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\obj\Debug\netcoreapp3.1\ConflictGame.genruntimeconfig.cache
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealtDanger.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthFull.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthHigh.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthLow.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthMedium.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthMedLow.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\Heart.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\ConflictGame\ConflictGame\bin\Debug\netcoreapp3.1\Content\HealthBar.xnb

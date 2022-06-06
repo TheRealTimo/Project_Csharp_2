@@ -23,6 +23,8 @@ namespace ConflictGame.States
         //background image
         private Texture2D _tempBackgroundTexture;
 
+       
+
 
         public GameState(Game1 game, GraphicsDevice graphicsDevice, ContentManager content, GraphicsDeviceManager graphics)
           : base(game, graphicsDevice, content)
@@ -45,7 +47,7 @@ namespace ConflictGame.States
             _tempBackgroundTexture = content.Load<Texture2D>("Backgrounds/Level2");
 
             //creating player character
-            player = new Character(content.Load<Texture2D>("Player/head"), new Vector2(50, 50), graphics);
+            player = new Character(content.Load<Texture2D>("Player/head"), new Vector2(50, 50), 100, graphics);
 
         }
 

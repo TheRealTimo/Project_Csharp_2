@@ -18,6 +18,8 @@
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttn.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttnBack.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/GreyBttnQuit.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/HealthBar.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Heart.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Loadingbackground.jpg</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/options.png</File>
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/Player/head.png</File>
@@ -33,6 +35,8 @@
     <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/wip1-industrial-brick_height.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

@@ -10,21 +10,26 @@ namespace ConflictGame
     class Character
     {
         public Texture2D texture;
+        public Rectangle rectangle;
 
         public Vector2 position;
         Vector2 velocity;
 
         private GraphicsDeviceManager _graphics;
-        
 
         public bool hasJumped;
 
-        public Character(Texture2D newTexture, Vector2 newPosition, GraphicsDeviceManager graphics)
+        
+
+        public int health;
+        public Character(Texture2D newTexture, Vector2 newPosition, int newHealth, GraphicsDeviceManager graphics)
         {
             _graphics = graphics;
             texture = newTexture;
             position = newPosition;
             hasJumped = true;
+
+            health = newHealth;
         }
 
         public void Jump()
@@ -110,8 +115,8 @@ namespace ConflictGame
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(
-                texture,
+            if (health > 0)
+                spriteBatch.Draw(texture,
                 position,
                 null, //source rectangle
                 Color.White,
@@ -121,6 +126,18 @@ namespace ConflictGame
                 SpriteEffects.None,
                 0f // layer depth
                 );
+
+            /*spriteBatch.Draw(
+                texture,
+                position,
+                null, //source rectangle
+                Color.White,
+                0f, // rotation
+                new Vector2(texture.Width / 2, texture.Height / 2),
+                Vector2.One, //scale
+                SpriteEffects.None,
+                0f // layer depth
+                );*/
         }
 
        
