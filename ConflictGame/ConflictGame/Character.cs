@@ -9,15 +9,15 @@ namespace ConflictGame
 {
     class Character
     {
-        Texture2D texture;
+        public Texture2D texture;
 
-        Vector2 position;
+        public Vector2 position;
         Vector2 velocity;
 
         private GraphicsDeviceManager _graphics;
         
 
-        bool hasJumped;
+        public bool hasJumped;
 
         public Character(Texture2D newTexture, Vector2 newPosition, GraphicsDeviceManager graphics)
         {
@@ -27,33 +27,66 @@ namespace ConflictGame
             hasJumped = true;
         }
 
+        public void Jump()
+        {
+            if (hasJumped == false) {
+                position.Y -= 20f;
+                velocity.Y = -10f;
+                hasJumped = true;
+            }
+        }
+        public void MoveRight()
+        {
+            velocity.X = 3f;
+        }
+        public void MoveLeft()
+        {
+            velocity.X = -3f;
+        }
+
+        public void OffPlat()
+        {
+            if (position.Y + texture.Height < _graphics.PreferredBackBufferHeight)
+            {
+                hasJumped = true;
+            }
+        }
+
+        public void PlatStand()
+        {
+            velocity.Y = 0;
+            hasJumped = false;
+        }
+
         public void Update(GameTime gameTime)
         {
             position += velocity;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.D))
-                velocity.X = 3f;
+            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+                MoveRight();
 
-            else if (Keyboard.GetState().IsKeyDown(Keys.A))
-                velocity.X = -3f;
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left))
+                MoveLeft();
 
             else
                 velocity.X = 0f;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.W) && hasJumped == false)
+            if (Keyboard.GetState().IsKeyDown(Keys.Up))
             {
-                position.Y -= 10f;
-                velocity.Y = -5f;
-                hasJumped = true;
+                Jump();
             }
 
             if (hasJumped == true)
             {
                 float i = 1;
-                velocity.Y += 0.25f * i;
+                velocity.Y += 0.20f * i;
+            }
+            else
+            {
+                velocity.Y = 5f;
             }
 
-            if(position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)
+            if (position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)
             {
                 hasJumped = false; 
             }
@@ -89,5 +122,7 @@ namespace ConflictGame
                 0f // layer depth
                 );
         }
+
+       
     }
 }
