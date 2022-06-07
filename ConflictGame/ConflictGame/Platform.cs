@@ -21,7 +21,7 @@ namespace ConflictGame
         //Update
         public void Update(Character player)
         {
-            //player.OffPlat();
+            /*player.OffPlat();
             if(player.position.X > rectangle.Left - player.texture.Width / 2 && player.position.X - player.texture.Width / 2 < rectangle.Right && player.position.Y + player.texture.Height / 2 > rectangle.Top && player.position.Y - player.texture.Height /2 < rectangle.Bottom)
             {//Checks if player extends crosses left of platform && Checks if player extends crosses Right of platform && Checks if player extends crosses Top of platform && Checks if player extends crosses Bootom of platform
 
@@ -41,8 +41,8 @@ namespace ConflictGame
                 else
                 {                         // else player is Right of platform
                     player.position.X = rectangle.Right + player.texture.Width / 2;
-                }
-            }
+                }*/
+            //}
 
 
         }

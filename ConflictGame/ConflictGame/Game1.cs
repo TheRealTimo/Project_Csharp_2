@@ -53,10 +53,10 @@ namespace ConflictGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            backgroundTask = new Task(this.BackgroundTask);
-            backgroundTask.Start();
+            //backgroundTask = new Task(this.BackgroundTask);
+            //backgroundTask.Start();
             // Main thread builds splashscreen
-            splashscreen = new Splashscreen(this, _graphics.GraphicsDevice, Content, _graphics);
+            splashscreen = new GameState(this, _graphics.GraphicsDevice, Content, _graphics);
             _currentState = splashscreen;
         }
         public void BackgroundTask()
@@ -64,17 +64,17 @@ namespace ConflictGame
             // field for backround task to be done while splashscreen is displayed
             gameState = new GameState(this, _graphics.GraphicsDevice, Content, _graphics);
             menuState = new MenuState(this, _graphics.GraphicsDevice, Content, _graphics.PreferredBackBufferWidth, _graphics.PreferredBackBufferHeight);
-            backgroundTask.Wait(2500);
+            //backgroundTask.Wait(2500);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            if (backgroundTask.IsCompleted)
+            /*if (backgroundTask.IsCompleted)
             {
                 backgroundTask.Dispose();
 
                 ChangeState("gs");     // Change next state to the preffered state after splashscreen
-            }
+            }*/
             if (_nextState != null)
             {
                 _currentState = _nextState;
@@ -106,7 +106,7 @@ namespace ConflictGame
                 _spriteBatch.End();
                 _spriteBatch.Begin();
             }
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            //GraphicsDevice.Clear(Color.CornflowerBlue);
             _currentState.Draw(gameTime, _spriteBatch);
             // TODO: Add your drawing code here
 
