@@ -1,13 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "E2fLIU1iqSlyd03cKgm+0h6JaEHiWoYQGOZNn5Ro3Jbe0VETL0yX//LAl9+8+SA3OZm3kYC1eRvbelc/Fx4U1Q==",
+  "dgSpecHash": "iQh4TEiqFl6OA1nv7DfhrcsBuHp+Sz6H43d/Vd25pYRFARrKnaczQrFf0I0p2fpTStWKdH1B+e5RclE4CTxkMw==",
   "success": true,
   "projectFilePath": "C:\\Users\\rstob\\Documents\\GitHub\\Project_Csharp_2\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rstob\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\rstob\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
-    "C:\\Users\\rstob\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
-    "C:\\Users\\rstob\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\rstob\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
   ],
   "logs": []
 }

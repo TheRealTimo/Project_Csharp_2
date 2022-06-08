@@ -9,89 +9,51 @@ namespace ConflictGame
 {
     class Character
     {
-        public Texture2D texture;
-        public Rectangle rectangle;
+        Texture2D texture;
 
-        public Vector2 position;
+        Vector2 position;
         Vector2 velocity;
 
         private GraphicsDeviceManager _graphics;
-
-        public bool hasJumped;
-
         
 
-        public int health;
-        public Character(Texture2D newTexture, Vector2 newPosition, int newHealth, GraphicsDeviceManager graphics)
+        bool hasJumped;
+
+        public Character(Texture2D newTexture, Vector2 newPosition, GraphicsDeviceManager graphics)
         {
             _graphics = graphics;
             texture = newTexture;
             position = newPosition;
             hasJumped = true;
-
-            health = newHealth;
-        }
-
-        public void Jump()
-        {
-            if (hasJumped == false) {
-                position.Y -= 20f;
-                velocity.Y = -10f;
-                hasJumped = true;
-            }
-        }
-        public void MoveRight()
-        {
-            velocity.X = 3f;
-        }
-        public void MoveLeft()
-        {
-            velocity.X = -3f;
-        }
-
-        public void OffPlat()
-        {
-            if (position.Y + texture.Height < _graphics.PreferredBackBufferHeight)
-            {
-                hasJumped = true;
-            }
-        }
-
-        public void PlatStand()
-        {
-            velocity.Y = 0;
-            hasJumped = false;
         }
 
         public void Update(GameTime gameTime)
         {
             position += velocity;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
-                MoveRight();
+            if (Keyboard.GetState().IsKeyDown(Keys.D))
+                velocity.X = 3f;
 
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left))
-                MoveLeft();
+            else if (Keyboard.GetState().IsKeyDown(Keys.A))
+                velocity.X = -3f;
 
             else
                 velocity.X = 0f;
 
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            if (Keyboard.GetState().IsKeyDown(Keys.W) && hasJumped == false)
             {
-                Jump();
+                position.Y -= 10f;
+                velocity.Y = -5f;
+                hasJumped = true;
             }
 
             if (hasJumped == true)
             {
                 float i = 1;
-                velocity.Y += 0.20f * i;
-            }
-            else
-            {
-                velocity.Y = 5f;
+                velocity.Y += 0.25f * i;
             }
 
-            if (position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)
+            if(position.Y + texture.Height >= _graphics.PreferredBackBufferHeight)
             {
                 hasJumped = false; 
             }
@@ -115,19 +77,7 @@ namespace ConflictGame
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (health > 0)
-                spriteBatch.Draw(texture,
-                position,
-                null, //source rectangle
-                Color.White,
-                0f, // rotation
-                new Vector2(texture.Width / 2, texture.Height / 2),
-                Vector2.One, //scale
-                SpriteEffects.None,
-                0f // layer depth
-                );
-
-            /*spriteBatch.Draw(
+            spriteBatch.Draw(
                 texture,
                 position,
                 null, //source rectangle
@@ -137,9 +87,7 @@ namespace ConflictGame
                 Vector2.One, //scale
                 SpriteEffects.None,
                 0f // layer depth
-                );*/
+                );
         }
-
-       
     }
 }
