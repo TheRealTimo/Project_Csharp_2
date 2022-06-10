@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBackWavy.png</SourceFile>
+  <SourceFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBackWavy.png</SourceFile>
   <SourceTime>2022-05-29T13:54:57.5392309+02:00</SourceTime>
-  <DestFile>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/bin/DesktopGL/RedBackWavy.xnb</DestFile>
-  <DestTime>2022-06-01T14:37:42.0786253+02:00</DestTime>
+  <DestFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/bin/DesktopGL/RedBackWavy.xnb</DestFile>
+  <DestTime>2022-06-08T15:13:14.8787034+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

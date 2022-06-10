@@ -4,41 +4,39 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/3guys.PNG</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/background.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Backgrounds/Level2.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/ball.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/BlueBackSqr.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/BlueBackWavy.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/ConflictPixelLogo.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/ConflictPixelTinyLogo.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/GreyBackSqr.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/GrEyBackWavy.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/GreyBttn.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/GreyBttnBack.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/GreyBttnQuit.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Loadingbackground.jpg</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/options.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Player/Azazel.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Player/Azazel3.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Player/head.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/playgame.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBackSqr.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBackWavy.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBttn.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBttnBack.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBttnExtra.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBttnOptions.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/RedBttnQuit.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/TempLevelBackground.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Tile/Tile1.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Tile/Tile2.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Tile/Tile3.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/Tile/Tile4.png</File>
-    <File>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/wip1-industrial-brick_height.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/3guys.PNG</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/background.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Backgrounds/Level2.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/ball.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/BlueBackSqr.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/BlueBackWavy.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/ConflictPixelLogo.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/ConflictPixelTinyLogo.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Font.spritefont</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/GreyBackSqr.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/GrEyBackWavy.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/GreyBttn.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/GreyBttnBack.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/GreyBttnQuit.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Loadingbackground.jpg</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/options.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Player/head.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/playgame.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBackSqr.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBackWavy.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBttn.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBttnBack.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBttnExtra.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBttnOptions.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/RedBttnQuit.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/TempLevelBackground.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Tile/Tile1.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Tile/Tile2.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Tile/Tile3.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/Tile/Tile4.png</File>
+    <File>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/wip1-industrial-brick_height.png</File>
   </SourceFiles>
   <DestFiles>
-    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

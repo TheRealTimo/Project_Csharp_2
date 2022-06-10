@@ -21,28 +21,28 @@ namespace ConflictGame
         //Update
         public void Update(Character player)
         {
-            /*player.OffPlat();
-            if(player.position.X > rectangle.Left - player.texture.Width / 2 && player.position.X - player.texture.Width / 2 < rectangle.Right && player.position.Y + player.texture.Height / 2 > rectangle.Top && player.position.Y - player.texture.Height /2 < rectangle.Bottom)
+            //player.OffPlat();
+            if(player.position.X > rectangle.Left - player.width / 2 && player.position.X - player.width / 2 < rectangle.Right && player.position.Y + player.height / 2 > rectangle.Top && player.position.Y - player.height /2 < rectangle.Bottom)
             {//Checks if player extends crosses left of platform && Checks if player extends crosses Right of platform && Checks if player extends crosses Top of platform && Checks if player extends crosses Bootom of platform
 
                 if (player.position.Y < rectangle.Top)
                 {                     //checks if player center is above the platform
-                    player.position.Y = rectangle.Top - player.texture.Height / 2;
+                    player.position.Y = rectangle.Top - player.height / 2;
                     player.PlatStand();
                 }
                 else if (player.position.X < rectangle.Left)
                 {                //checks if player center is above the platform
-                    player.position.X = rectangle.Left - player.texture.Width / 2;
+                    player.position.X = rectangle.Left - player.width / 2;
                 }
                 else if (player.position.Y > rectangle.Bottom)
                 {     //checks if player center is above the platform
-                    player.position.Y = rectangle.Bottom + player.texture.Height / 2;
+                    player.position.Y = rectangle.Bottom + player.height / 2;
                 }
                 else
                 {                         // else player is Right of platform
-                    player.position.X = rectangle.Right + player.texture.Width / 2;
-                }*/
-            //}
+                    player.position.X = rectangle.Right + player.width / 2;
+                }
+            }
 
 
         }

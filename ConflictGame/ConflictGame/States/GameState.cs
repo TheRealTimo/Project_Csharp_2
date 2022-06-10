@@ -22,6 +22,7 @@ namespace ConflictGame.States
 
         Map map;
 
+        private AnimatedSprite gerjanSheet;
         //background image
         private Texture2D _tempBackgroundTexture;
 
@@ -35,7 +36,8 @@ namespace ConflictGame.States
 
             map = new Map();
             player = new Player();
-            player.Load(content);
+            gerjanSheet = new AnimatedSprite(content.Load<SpriteSheet>("gerjan.sf", new JsonContentLoader()));
+            player.Load(gerjanSheet, content);
 
             //choosing backround image texture
             _tempBackgroundTexture = content.Load<Texture2D>("Backgrounds/Level2");

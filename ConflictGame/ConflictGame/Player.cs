@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.Sprites;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -10,10 +11,13 @@ namespace ConflictGame
 {
     class Player
     {
-        private Texture2D texture;
+        public AnimatedSprite sprite;
+        public int height = 32;
+        public int width = 22;
         public Vector2 position = new Vector2(640, 304);
         private Vector2 velocity;
         private Rectangle rectangle;
+        public int attackPressedTime = 0;
 
         private bool hasJumped = false;
 
@@ -24,29 +28,76 @@ namespace ConflictGame
         }
         public Player() { }
 
-        public void Load(ContentManager Content)
+        public void Load(AnimatedSprite newSprite, ContentManager Content)
         {
-            velocity.Y = 1f;
-            texture = Content.Load<Texture2D>("Player/azazel3");           
+            velocity.Y = 1f; sprite = newSprite;
+            hasJumped = true;       
+        }
+        public void Jump()
+        {
+            if (hasJumped == false)
+            {
+                sprite.Play("jump");
+                position.Y -= 20f;
+                velocity.Y = -10f;
+                hasJumped = true;
+            }
+        }
+
+        public void Punch()
+        {
+            if (attackPressedTime == 0)
+            {
+                attackPressedTime = 50;
+                sprite.Play("punch");
+            }
+        }
+        public void MoveRight()
+        {
+            
+            if (attackPressedTime == 0 && !hasJumped)
+                sprite.Play("runright");
+        }
+        public void MoveLeft()
+        {
+            
+            if (attackPressedTime == 0 && !hasJumped)
+                sprite.Play("runleft");
         }
 
         public void Update(GameTime gameTime)
         {
+            var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             position += velocity;
-            rectangle = new Rectangle((int)position.X, (int)position.Y, texture.Width, texture.Height);
+            rectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
 
             Input(gameTime);
 
             if (velocity.Y < 20 )
                 velocity.Y += 0.4f;
+
+            if (attackPressedTime > 0)
+                attackPressedTime--;
+
+            sprite.Update(deltaSeconds);
         }
 
         private void Input(GameTime gameTime)
-        { 
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
+        {
+            var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            if (Keyboard.GetState().IsKeyDown(Keys.P))
+                Punch();
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Right)) {
                 velocity.X = (float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
-            else if (Keyboard.GetState().IsKeyDown(Keys.Left))
+                MoveRight();
+            }
+
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left)) {
                 velocity.X = -(float)gameTime.ElapsedGameTime.TotalMilliseconds / 3;
+                MoveLeft();
+            }
+            
             else velocity.X = 0f;
 
             if(Keyboard.GetState().IsKeyDown(Keys.Space)) 
@@ -54,27 +105,18 @@ namespace ConflictGame
                 Jump();
             }
         }
-        public void Jump()
-        {
-            if (hasJumped == false)
-            {
-                position.Y -= 2f;
-                velocity.Y = -12f;
-                hasJumped = true;
-            }
-        }
+        
 
         public void Collision(Rectangle newRectangle, int xOffset, int yOffset)
         {
-            if (rectangle.Intersects(newRectangle)) {
-                if (rectangle.TouchTopOf(newRectangle))
-                {
-                    rectangle.Y = newRectangle.Y - rectangle.Height;
-                    velocity.Y = 0f;
-                    hasJumped = false;
-                }
-
-                else if (rectangle.TouchLeftOf(newRectangle))
+            if (rectangle.TouchTopOf(newRectangle))
+            {
+                rectangle.Y = newRectangle.Y - rectangle.Height;
+                velocity.Y = 0f;
+                hasJumped = false;
+            }
+            if (rectangle.Intersects(newRectangle) && !hasJumped) {
+                if (rectangle.TouchLeftOf(newRectangle))
                 {
                     position.X = newRectangle.X - rectangle.Width - 2;
                 }
@@ -98,7 +140,7 @@ namespace ConflictGame
 
         public void Draw(SpriteBatch _spriteBatch)
         {
-            _spriteBatch.Draw(texture, rectangle, Color.White);
+            _spriteBatch.Draw(sprite, position);
         }
     }
 }

@@ -24,8 +24,8 @@ namespace ConflictGame.States
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            
-            graphics.GraphicsDevice.Clear(Color.Black);
+           
+           graphics.GraphicsDevice.Clear(Color.Black);
             spriteBatch.Draw(titleCard, titlePosition, Color.White);
             spriteBatch.End();
         }
