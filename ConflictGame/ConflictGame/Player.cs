@@ -30,7 +30,8 @@ namespace ConflictGame
 
         public void Load(AnimatedSprite newSprite, ContentManager Content)
         {
-            velocity.Y = 1f; sprite = newSprite;
+            velocity.Y = 1f;
+            sprite = newSprite;
             hasJumped = true;       
         }
         public void Jump()
@@ -67,7 +68,7 @@ namespace ConflictGame
 
         public void Update(GameTime gameTime)
         {
-            var deltaSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            
             position += velocity;
             rectangle = new Rectangle((int)position.X, (int)position.Y, width, height);
 
@@ -79,7 +80,7 @@ namespace ConflictGame
             if (attackPressedTime > 0)
                 attackPressedTime--;
 
-            sprite.Update(deltaSeconds);
+            sprite.Update(gameTime);
         }
 
         private void Input(GameTime gameTime)

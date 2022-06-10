@@ -18,7 +18,12 @@ namespace ConflictGame.States
         private int bufferHeight;
 
         // Creating player 1
+        private Player[] playerArray = new Player[] { };
+        
         Player player;
+        Player player2; //New: Adding a new player
+        Player player3;
+        Player player4;
 
         Map map;
 
@@ -36,8 +41,11 @@ namespace ConflictGame.States
 
             map = new Map();
             player = new Player();
+            player2 = new Player();
+            player2.position.X = player.position.X + 50;
             gerjanSheet = new AnimatedSprite(content.Load<SpriteSheet>("gerjan.sf", new JsonContentLoader()));
             player.Load(gerjanSheet, content);
+            player2.Load(gerjanSheet, content);
 
             //choosing backround image texture
             _tempBackgroundTexture = content.Load<Texture2D>("Backgrounds/Level2");
@@ -58,8 +66,9 @@ namespace ConflictGame.States
 
             //draw player character
             player.Draw(spriteBatch);
+            player2.Draw(spriteBatch);
 
-            
+
             spriteBatch.End();
         }
 
@@ -121,8 +130,12 @@ namespace ConflictGame.States
         {
             //updating character with gametime
             player.Update(gameTime);
+            player2.Update(gameTime);
             foreach (CollisionTiles tile in map.CollisionTiles)
+            {
                 player.Collision(tile.Rectangle, map.Width, map.Height);
+                player2.Collision(tile.Rectangle, map.Width, map.Height);
+            }
 
             //Code for more than 1 player
             PlayerIndex playerindex = PlayerIndex.One;
@@ -131,20 +144,54 @@ namespace ConflictGame.States
             foreach (PlayerIndex index in players)
             {
                 //Gamepad to player connection
-                GamePadCapabilities capabilities = GamePad.GetCapabilities(PlayerIndex.One);
+                GamePadCapabilities capabilities = GamePad.GetCapabilities(index);
 
                 //getting gamepad state
-                GamePadState gstate = Gamepad.GetState();
+                GamePadState gstate = Gamepad.GetState(index);
 
                 //Gamepad joystick detection for movment
                 if (capabilities.HasLeftXThumbStick)
                 {
-                    player.position.X += gstate.ThumbSticks.Left.X * 10.0f;//uses the angle of joystick to determine movement speed
+                    switch (index)
+                    {
+                        case PlayerIndex.One:
+                            player.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            if (gstate.ThumbSticks.Left.X < 0.0f) player.MoveLeft();
+                            else player.MoveRight();
+                            break;
+                        case PlayerIndex.Two:
+                            player2.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            if (gstate.ThumbSticks.Left.X < 0.0f) player.MoveLeft();
+                            else player.MoveRight();
+                            break;
+                        case PlayerIndex.Three:
+                            player3.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            break;
+                        case PlayerIndex.Four:
+                            player4.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            break;
+                    }
+
                 }
+
                 //Gamepad A/X button for jumping
                 if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
                 {
-                    player.Jump(); //calls jump function from player
+                    switch (index)
+                    {
+                        case PlayerIndex.One:
+                            player.Jump();
+                            break;
+                        case PlayerIndex.Two:
+                            player2.Jump();
+                            break;
+                        case PlayerIndex.Three:
+                            player3.Jump();
+                            break;
+                        case PlayerIndex.Four:
+                            player4.Jump();
+                            break;
+                    }
                 }
             }
         }

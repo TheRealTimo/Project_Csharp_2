@@ -15,10 +15,10 @@ namespace ConflictGame
         {
         }
 
-        public static GamePadState GetState()
+        public static GamePadState GetState(PlayerIndex index)
         {
             previousGamePadState = currentGamePadState;
-            currentGamePadState = GamePad.GetState(PlayerIndex.One); //Alter to have any player index
+            currentGamePadState = GamePad.GetState(index); //Alter to have any player index
             return currentGamePadState;
         }
 

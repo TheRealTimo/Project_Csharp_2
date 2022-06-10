@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/wip1-industrial-brick_height.png</SourceFile>
+  <SourceFile>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/wip1-industrial-brick_height.png</SourceFile>
   <SourceTime>2022-06-08T13:22:02.2320307+02:00</SourceTime>
-  <DestFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/bin/DesktopGL/Content/wip1-industrial-brick_height.xnb</DestFile>
-  <DestTime>2022-06-08T14:52:51.1284785+02:00</DestTime>
+  <DestFile>C:/Users/Gebruiker/Documents/GitHub/Project_Csharp_2/ConflictGame/ConflictGame/Content/bin/DesktopGL/Content/wip1-industrial-brick_height.xnb</DestFile>
+  <DestTime>2022-06-10T16:34:05.4775807+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
