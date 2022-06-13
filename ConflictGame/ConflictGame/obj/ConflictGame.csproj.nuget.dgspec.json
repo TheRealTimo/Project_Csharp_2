@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Desktop\\Project_Csharp_2-main\\Project_Csharp_2-main\\ConflictGame\\ConflictGame\\ConflictGame.csproj": {}
+    "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Keanu (1)\\Project_Csharp_2-Keanu\\ConflictGame\\ConflictGame\\ConflictGame.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Desktop\\Project_Csharp_2-main\\Project_Csharp_2-main\\ConflictGame\\ConflictGame\\ConflictGame.csproj": {
+    "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Keanu (1)\\Project_Csharp_2-Keanu\\ConflictGame\\ConflictGame\\ConflictGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Project_Csharp_2-main\\Project_Csharp_2-main\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Keanu (1)\\Project_Csharp_2-Keanu\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
         "projectName": "ConflictGame",
-        "projectPath": "C:\\Users\\Admin\\Desktop\\Project_Csharp_2-main\\Project_Csharp_2-main\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
+        "projectPath": "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Keanu (1)\\Project_Csharp_2-Keanu\\ConflictGame\\ConflictGame\\ConflictGame.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Desktop\\Project_Csharp_2-main\\Project_Csharp_2-main\\ConflictGame\\ConflictGame\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Keanu (1)\\Project_Csharp_2-Keanu\\ConflictGame\\ConflictGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

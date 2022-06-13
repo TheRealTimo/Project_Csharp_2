@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Runtime.ExceptionServices;
-using System.Threading;
-using MonoGame.Extended.Content;
+﻿using MonoGame.Extended.Content;
 using MonoGame.Extended.Serialization;
 using MonoGame.Extended.Sprites;
 using Microsoft.Xna.Framework.Input;
@@ -15,21 +11,24 @@ namespace ConflictGame.States
     public class GameState : State
     {
         //platform creating
-        Platform[] platform;
+        Platform platform;
 
         //vales for screen size
         private int bufferWidth;
         private int bufferHeight;
 
         // Creating player 1
-        private Character[] playerArray = new Character[]{};
+        private Player[] playerArray = new Player[] { };
+        
+        Player player;
+        Player player2; //New: Adding a new player
+        Player player3;
+        Player player4;
 
-        Character player;
-        Character player2; //New: Adding a new player
-        Character player3;
-        Character player4;
+        Map map;
 
-
+        private AnimatedSprite gerjanSheet;
+        private AnimatedSprite gerjanSheet2;
         //background image
         private Texture2D _tempBackgroundTexture;
 
@@ -41,25 +40,21 @@ namespace ConflictGame.States
             this.bufferWidth = graphics.PreferredBackBufferWidth;
             this.bufferHeight = graphics.PreferredBackBufferHeight;
 
-            // creating platform with collision handling
-            this.platform = new Platform[6] { 
-                new Platform(content, (int)bufferWidth * 0.172, (int)bufferHeight * 0.97, 1260, 35),
-                new Platform(content, (int)bufferWidth * 0.31, (int)bufferHeight * 0.623, 727, 35),
-                new Platform(content, (int)bufferWidth * 0.755, (int)bufferHeight * 0.72, 150, 35),
-                new Platform(content, (int)bufferWidth * 0.17, (int)bufferHeight * 0.72, 150, 35),
-                new Platform(content, (int)bufferWidth * 0.0, (int)bufferHeight * 0.825, 280, 35),
-                new Platform(content, (int)bufferWidth * 0.855, (int)bufferHeight * 0.825, 280, 35)
-            };
+            map = new Map();
+            player = new Player();
+            player2 = new Player();
+            player2.position.X = player.position.X + 50;
+            gerjanSheet = new AnimatedSprite(content.Load<SpriteSheet>("gerjan.sf", new JsonContentLoader()));
+            gerjanSheet2 = new AnimatedSprite(content.Load<SpriteSheet>("gerjan.sf", new JsonContentLoader()));
+            player.Load(gerjanSheet, content);
+            player2.Load(gerjanSheet2, content);
 
             //choosing backround image texture
             _tempBackgroundTexture = content.Load<Texture2D>("Backgrounds/Level2");
 
-            //creating player character
-            player = new Character(content.Load<Texture2D>("Player/head"), new Vector2(50, 50), graphics);
-            player2 = new Character(content.Load<Texture2D>("Player/head"), new Vector2(50, 50), graphics); //New: Creating new player
-            player2.position.X = 300;
-
-
+            //creating map1
+            GenerateMap1(content);
+            
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -68,16 +63,13 @@ namespace ConflictGame.States
             //draw backround
             spriteBatch.Draw(_tempBackgroundTexture, new Vector2(0, 0), Color.White);
 
+            //draw map1
+            map.Draw(spriteBatch);
+
             //draw player character
             player.Draw(spriteBatch);
-            player2.Draw(spriteBatch); //New: Draw sprite for second player
+            player2.Draw(spriteBatch);
 
-            //Draw platform 
-            foreach(Platform platform in platform)
-            {
-                platform.Draw(gameTime, spriteBatch);
-            }
-            
 
             spriteBatch.End();
         }
@@ -86,24 +78,70 @@ namespace ConflictGame.States
         {
         }
 
+        private void GenerateMap1(ContentManager content)
+        {
+            #region TestMapOne
+            Tiles.Content = content;
+
+            //34 rows
+            // 1 = Mid
+            // 2 = Right
+            // 3 = Left
+            // 4 = Red
+            map.Generate(new int[,]{
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,3,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,1,1,2,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {3,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,1,1,1,1,1,1,1,2},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
+                {0,0,0,0,0,0,0,0,0,0,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0,0,0,0,0},
+                {3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2},
+            }, 32);
+            #endregion
+        }
+
         public override void Update(GameTime gameTime)
         {
             //updating character with gametime
             player.Update(gameTime);
-            player2.Update(gameTime); //New: Update player with gametime
-
-            //updating the collision detection in platform class with player character
-            foreach (Platform platform in platform)
+            player2.Update(gameTime);
+            foreach (CollisionTiles tile in map.CollisionTiles)
             {
-                platform.Update(player);
-                platform.Update(player2); //NEW
+                player.Collision(tile.Rectangle, map.Width, map.Height);
+                player2.Collision(tile.Rectangle, map.Width, map.Height);
             }
 
-
-
             //Code for more than 1 player
-            PlayerIndex[] players =  {PlayerIndex.One, PlayerIndex.Two};
-
+            PlayerIndex playerindex = PlayerIndex.One;
+            PlayerIndex[] players = new PlayerIndex[] { PlayerIndex.One, PlayerIndex.Two };
 
             foreach (PlayerIndex index in players)
             {
@@ -116,19 +154,32 @@ namespace ConflictGame.States
                 //Gamepad joystick detection for movment
                 if (capabilities.HasLeftXThumbStick)
                 {
+                    var dir = 0.0f;
                     switch (index)
                     {
                         case PlayerIndex.One:
                             player.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            dir = gstate.ThumbSticks.Left.X;
+                            if (dir < 0.0f){player.MoveLeft();}
+                            else if (dir > 0.0f){player.MoveRight();}
                             break;
                         case PlayerIndex.Two:
                             player2.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            dir = gstate.ThumbSticks.Left.X;
+                            if (dir < 0.0f) { player2.MoveLeft(); }
+                            else if (dir > 0.0f) { player2.MoveRight(); }
                             break;
                         case PlayerIndex.Three:
                             player3.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            dir = gstate.ThumbSticks.Left.X;
+                            if (dir < 0.0f) { player3.MoveLeft(); }
+                            else if (dir > 0.0f) { player3.MoveRight(); }
                             break;
                         case PlayerIndex.Four:
                             player4.position.X += gstate.ThumbSticks.Left.X * 10.0f; //uses the angle of joystick to determine movement speed
+                            dir = gstate.ThumbSticks.Left.X;
+                            if (dir < 0.0f) { player4.MoveLeft(); }
+                            else if (dir > 0.0f) { player4.MoveRight(); }
                             break;
                     }
 
@@ -153,8 +204,26 @@ namespace ConflictGame.States
                             break;
                     }
                 }
-            }
 
+                if (capabilities.HasBButton && gstate.IsButtonDown(Buttons.B))
+                {
+                    switch (index)
+                    {
+                        case PlayerIndex.One:
+                            player.Punch();
+                            break;
+                        case PlayerIndex.Two:
+                            player2.Punch();
+                            break;
+                        case PlayerIndex.Three:
+                            player3.Punch();
+                            break;
+                        case PlayerIndex.Four:
+                            player4.Punch();
+                            break;
+                    }
+                }
+            }           
         }
     }
 }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/BlueBackSqr.png</SourceFile>
+  <SourceFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/BlueBackSqr.png</SourceFile>
   <SourceTime>2022-05-29T13:54:57.5242386+02:00</SourceTime>
-  <DestFile>C:/Users/Gebruiker/Desktop/ConflictGame/ConflictGame/Content/bin/DesktopGL/BlueBackSqr.xnb</DestFile>
-  <DestTime>2022-05-29T17:20:39.7187091+02:00</DestTime>
+  <DestFile>C:/Users/Gebruiker/Documents/SashaCode/ConflictGame/Content/bin/DesktopGL/BlueBackSqr.xnb</DestFile>
+  <DestTime>2022-06-08T15:13:11.2507899+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

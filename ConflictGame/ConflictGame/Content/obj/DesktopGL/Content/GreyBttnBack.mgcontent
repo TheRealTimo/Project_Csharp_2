@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Admin/Desktop/Project_Csharp_2-main/Project_Csharp_2-main/ConflictGame/ConflictGame/Content/GreyBttnBack.png</SourceFile>
-  <SourceTime>2022-06-02T20:47:19.2169895+02:00</SourceTime>
-  <DestFile>C:/Users/Admin/Desktop/Project_Csharp_2-main/Project_Csharp_2-main/ConflictGame/ConflictGame/Content/bin/DesktopGL/Content/GreyBttnBack.xnb</DestFile>
-  <DestTime>2022-06-02T20:47:44.7367216+02:00</DestTime>
+  <SourceFile>C:/Users/Admin/Downloads/Project_Csharp_2-Keanu (1)/Project_Csharp_2-Keanu/ConflictGame/ConflictGame/Content/GreyBttnBack.png</SourceFile>
+  <SourceTime>2022-06-13T20:51:40.4906885+02:00</SourceTime>
+  <DestFile>C:/Users/Admin/Downloads/Project_Csharp_2-Keanu (1)/Project_Csharp_2-Keanu/ConflictGame/ConflictGame/Content/bin/DesktopGL/Content/GreyBttnBack.xnb</DestFile>
+  <DestTime>2022-06-13T20:52:17.2576195+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

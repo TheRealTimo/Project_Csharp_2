@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/Admin/Desktop/Project_Csharp_2-main/Project_Csharp_2-main/ConflictGame/ConflictGame/Content/3guys.PNG</SourceFile>
-  <SourceTime>2022-06-02T20:47:19.1388553+02:00</SourceTime>
-  <DestFile>C:/Users/Admin/Desktop/Project_Csharp_2-main/Project_Csharp_2-main/ConflictGame/ConflictGame/Content/bin/DesktopGL/Content/3guys.xnb</DestFile>
-  <DestTime>2022-06-02T20:47:42.7352689+02:00</DestTime>
+  <SourceFile>C:/Users/Admin/Downloads/Project_Csharp_2-Keanu (1)/Project_Csharp_2-Keanu/ConflictGame/ConflictGame/Content/3guys.PNG</SourceFile>
+  <SourceTime>2022-06-13T20:51:40.3475665+02:00</SourceTime>
+  <DestFile>C:/Users/Admin/Downloads/Project_Csharp_2-Keanu (1)/Project_Csharp_2-Keanu/ConflictGame/ConflictGame/Content/bin/DesktopGL/Content/3guys.xnb</DestFile>
+  <DestTime>2022-06-13T20:52:15.7494491+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
