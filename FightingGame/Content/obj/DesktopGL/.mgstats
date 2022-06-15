@@ -1,0 +1,5 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Background.png","C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/bin/DesktopGL/Background.xnb","TextureProcessor","Texture2DContent",74342,8294485,0,2720529
+"C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/OptionsButton.png","C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/bin/DesktopGL/Controls/OptionsButton.xnb","TextureProcessor","Texture2DContent",8364,161981,0,0071762
+"C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/PlayButton.png","C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/bin/DesktopGL/Controls/PlayButton.xnb","TextureProcessor","Texture2DContent",6465,161981,0,0046653
+"C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/QuitButton.png","C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/bin/DesktopGL/Controls/QuitButton.xnb","TextureProcessor","Texture2DContent",6653,161981,0,0065797
