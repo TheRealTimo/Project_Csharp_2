@@ -8,8 +8,6 @@ namespace FightingGame.GameStates
 {
     public class PlayGameState : GameState
     {
-        private readonly List<Player> _players = new List<Player>();
-
         public PlayGameState(FightingGame game) : base(game)
         {
             int[,] blocks = new int[,]
@@ -60,16 +58,6 @@ namespace FightingGame.GameStates
                     }
                 }
             }
-
-            _players.Add(new Player(this, new Vector2(64, 64)));
-            _players.Add(new Player(this, new Vector2(64, 64)));
-            _players.Add(new Player(this, new Vector2(64, 64)));
-            _players.Add(new Player(this, new Vector2(64, 64)));
-
-            foreach (Player player in _players)
-            {
-                GameComponents.Add(player);
-            }
         }
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -77,39 +65,65 @@ namespace FightingGame.GameStates
             base.Draw(gameTime, spriteBatch);
         }
 
+        public override void OnEnter()
+        {
+            base.OnEnter();
+
+            foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
+            {
+                GameComponents.Add(keyValuePair.Value);
+            }
+        }
+
+        public override void OnExit()
+        {
+            base.OnExit();
+
+            foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
+            {
+                GameComponents.Remove(keyValuePair.Value);
+            }
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
 
-            foreach (Player player in _players)
+            foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
+                // GamePadState gamePadState = GamePad.GetState(keyValuePair.Key);
                 KeyboardState keyboardState = Keyboard.GetState();
 
+                // if (gamePadState.ThumbSticks.Left.X != 0)
                 if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.Right))
                 {
+                    // if (gamePadState.ThumbSticks.Left.X < 0)
                     if (keyboardState.IsKeyDown(Keys.Left))
                     {
-                        player.RunLeft(gameTime);
+                        keyValuePair.Value.RunLeft(gameTime);
                     }
 
+                    // if (gamePadState.ThumbSticks.Left.X > 0)
                     if (keyboardState.IsKeyDown(Keys.Right))
                     {
-                        player.RunRight(gameTime);
+                        keyValuePair.Value.RunRight(gameTime);
                     }
                 }
                 else
                 {
-                    player.Idle(gameTime);
+                    keyValuePair.Value.Idle(gameTime);
                 }
 
+                // if (gamePadState.IsButtonDown(Buttons.A))
                 if (keyboardState.IsKeyDown(Keys.Up))
                 {
-                    player.Jump();
+                    keyValuePair.Value.Jump();
                 }
 
+                // if (gamePadState.IsButtonDown(Buttons.B))
                 if (keyboardState.IsKeyDown(Keys.Space))
                 {
-                    player.Punch();
+                    keyValuePair.Value.Punch();
                 }
             }
         }

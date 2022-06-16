@@ -38,13 +38,7 @@ namespace FightingGame
             }
         }
 
-        public virtual void LoadContent()
-        {
-            foreach (GameComponent gameComponent in GameComponents)
-            {
-                gameComponent.LoadContent();
-            }
-        }
+        public virtual void LoadContent() { }
 
         public virtual void OnEnter() { }
 

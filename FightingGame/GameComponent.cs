@@ -59,8 +59,6 @@ namespace FightingGame
 
         public abstract void Draw(GameTime gameTime, SpriteBatch spriteBatch);
 
-        public virtual void LoadContent() { }
-
         public abstract void Update(GameTime gameTime);
     }
 }
