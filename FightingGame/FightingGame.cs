@@ -1,44 +1,74 @@
 ﻿using FightingGame.GameStates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using MonoGame.Extended.Content;
+using MonoGame.Extended.Serialization;
+using MonoGame.Extended.Sprites;
 using System.Collections.Generic;
 
 namespace FightingGame
 {
     public class FightingGame : Game
     {
+        private readonly Dictionary<string, GameState> _gameStates;
         private readonly GraphicsDeviceManager _graphics;
+        private readonly Dictionary<string, SpriteSheet> _spriteSheets;
+        private readonly Dictionary<string, Texture2D> _textures;
 
         private GameState _gameState;
         private SpriteBatch _spriteBatch;
 
         public FightingGame()
         {
-            _graphics = new GraphicsDeviceManager(this);
-
-            GameStates = new Dictionary<string, GameState>
+           _gameStates = new Dictionary<string, GameState>
             {
                 { "Menu", new MenuGameState(this) },
+                { "Options", new OptionsGameState(this) },
                 { "Play", new PlayGameState(this) }
             };
 
-            ChangeGameState(GameStates["Menu"]);
+            _graphics = new GraphicsDeviceManager(this);
 
-            Textures = new Dictionary<string, Texture2D>();
+            _spriteSheets = new Dictionary<string, SpriteSheet>();
+            _textures = new Dictionary<string, Texture2D>();
 
             Content.RootDirectory = "Content";
 
             IsMouseVisible = true;
+
+            ChangeGameState(_gameStates["Menu"]);
+        }
+
+        public GameState GameState
+        {
+            get
+            {
+                return _gameState;
+            }
         }
 
         public Dictionary<string, GameState> GameStates
         {
-            get;
+            get
+            {
+                return _gameStates;
+            }
+        }
+
+        public Dictionary <string, SpriteSheet> SpriteSheets
+        {
+            get
+            {
+                return _spriteSheets;
+            }
         }
 
         public Dictionary<string, Texture2D> Textures
         {
-            get;
+            get
+            {
+                return _textures;
+            }
         }
 
         public void ChangeGameState(GameState gameState)
@@ -81,19 +111,27 @@ namespace FightingGame
             _graphics.IsFullScreen = false;
 
             _graphics.ApplyChanges();
-
-            _gameState.LoadContent();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            Textures.Add("Background", Content.Load<Texture2D>("Background"));
+            _spriteSheets.Add("Player", Content.Load<SpriteSheet>("Player.sf", new JsonContentLoader()));
 
-            Textures.Add("OptionsButton", Content.Load<Texture2D>("Controls/OptionsButton"));
-            Textures.Add("PlayButton", Content.Load<Texture2D>("Controls/PlayButton"));
-            Textures.Add("QuitButton", Content.Load<Texture2D>("Controls/QuitButton"));
+            _textures.Add("RedBackground", Content.Load<Texture2D>("RedBackground"));
+
+            _textures.Add("OptionsButton", Content.Load<Texture2D>("Controls/OptionsButton"));
+            _textures.Add("PlayButton", Content.Load<Texture2D>("Controls/PlayButton"));
+            _textures.Add("QuitButton", Content.Load<Texture2D>("Controls/QuitButton"));
+
+            _textures.Add("Block", Content.Load<Texture2D>("Block"));
+            _textures.Add("Player", Content.Load<Texture2D>("Player"));
+
+            foreach (GameState gameState in _gameStates.Values)
+            {
+                gameState.LoadContent();
+            }
         }
 
         protected override void Update(GameTime gameTime)

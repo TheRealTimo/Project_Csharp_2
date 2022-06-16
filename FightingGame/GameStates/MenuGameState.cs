@@ -15,9 +15,9 @@ namespace FightingGame.GameStates
 
         public MenuGameState(FightingGame game) : base(game)
         {
-            _optionsButton = new Button(new Vector2(200, 550));
-            _playButton = new Button(new Vector2(250, 300));
-            _quitButton = new Button(new Vector2(150, 800));
+            _optionsButton = new Button(this, new Vector2(200, 550), new Rectangle(0, 0, 413, 98));
+            _playButton = new Button(this, new Vector2(250, 300), new Rectangle(0, 0, 413, 98));
+            _quitButton = new Button(this, new Vector2(150, 800), new Rectangle(0, 0, 413, 98));
 
             _optionsButton.OnClick += OnSettingsButtonClick;
             _playButton.OnClick += OnPlayButtonClick;
@@ -35,35 +35,30 @@ namespace FightingGame.GameStates
             base.Draw(gameTime, spriteBatch);
         }
 
-        public void DrawBackground(SpriteBatch spriteBatch)
-        {
-            spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), new Color(255, 255, 255));
-        }
-
         public override void LoadContent()
         {
             base.LoadContent();
 
-            _backgroundTexture = Game.Textures["Background"];
+            _backgroundTexture = Game.Textures["RedBackground"];
 
             _optionsButton.Texture = Game.Textures["OptionsButton"];
             _playButton.Texture = Game.Textures["PlayButton"];
             _quitButton.Texture = Game.Textures["QuitButton"];
         }
 
-        public override void Update(GameTime gameTime)
+        private void DrawBackground(SpriteBatch spriteBatch)
         {
-            base.Update(gameTime);
+            spriteBatch.Draw(_backgroundTexture, new Vector2(0, 0), new Color(255, 255, 255));
         }
 
         private void OnPlayButtonClick(object sender, EventArgs e)
         {
-            Game.ChangeGameState(Game.GameStates["play"]);
+            Game.ChangeGameState(Game.GameStates["Play"]);
         }
 
         private void OnSettingsButtonClick(object sender, EventArgs e)
         {
-            Game.ChangeGameState(Game.GameStates["options"]);
+            Game.ChangeGameState(Game.GameStates["Options"]);
         }
 
         private void OnQuitButtonClick(object sender, EventArgs e)

@@ -4,12 +4,16 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/rstob/Downloads/FightingGame/Content/Background.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame/Content/Controls/OptionsButton.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame/Content/Controls/PlayButton.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame/Content/Controls/QuitButton.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Block.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/OptionsButton.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/PlayButton.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Controls/QuitButton.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/Player.png</File>
+    <File>C:/Users/Notebook01/source/repos/Fighting Game/FightingGame/Content/RedBackground.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

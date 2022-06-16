@@ -6,21 +6,28 @@ namespace FightingGame
 {
     public abstract class GameState
     {
+        private readonly FightingGame _game;
+        private readonly List<GameComponent> _gameComponents = new List<GameComponent>();
+
         public GameState(FightingGame game)
         {
-            Game = game;
-
-            GameComponents = new List<GameComponent>();
+            _game = game;
         }
 
         public FightingGame Game
         {
-            get;
+            get
+            {
+                return _game;
+            }
         }
 
         public List<GameComponent> GameComponents
         {
-            get;
+            get
+            {
+                return _gameComponents;
+            }
         }
 
         public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
@@ -31,7 +38,13 @@ namespace FightingGame
             }
         }
 
-        public virtual void LoadContent() { }
+        public virtual void LoadContent()
+        {
+            foreach (GameComponent gameComponent in GameComponents)
+            {
+                gameComponent.LoadContent();
+            }
+        }
 
         public virtual void OnEnter() { }
 

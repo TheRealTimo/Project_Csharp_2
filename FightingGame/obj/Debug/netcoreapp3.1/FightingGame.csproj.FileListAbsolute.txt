@@ -30,37 +30,10 @@ C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp
 C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\OptionsButton.xnb
 C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\BlueBackground.xnb
 C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\RedBackground.xnb
-C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\Background.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\BlueBackground.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\PlayGameButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\SettingsButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayGameButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\RedBackground.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Background.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\OptionsButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\PlayButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\Content\Controls\QuitButton.xnb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.exe
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.deps.json
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.runtimeconfig.json
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.runtimeconfig.dev.json
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.dll
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\FightingGame.pdb
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\MonoGame.Framework.dll
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libSDL2-2.0.so.0
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libopenal.so.1
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\osx\native\libSDL2-2.0.0.dylib
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\osx\native\libopenal.1.dylib
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\SDL2.dll
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\soft_oal.dll
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\SDL2.dll
-C:\Users\rstob\Downloads\FightingGame\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\soft_oal.dll
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.csproj.AssemblyReference.cache
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.AssemblyInfoInputs.cache
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.AssemblyInfo.cs
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.csproj.CoreCompileInputs.cache
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.csproj.CopyComplete
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.dll
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.pdb
-C:\Users\rstob\Downloads\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.genruntimeconfig.cache
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\Player.xnb
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\MonoGame.Extended.dll
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\MonoGame.Extended.Animations.dll
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\Block.xnb
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\MonoGame.Extended.Graphics.dll
+C:\Users\Notebook01\source\repos\Fighting Game\FightingGame\bin\Debug\netcoreapp3.1\Content\Player.sf
