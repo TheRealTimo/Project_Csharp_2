@@ -1,4 +1,5 @@
-﻿using FightingGame.GameStates;
+﻿using FightingGame.GameComponents;
+using FightingGame.GameStates;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using MonoGame.Extended.Content;
@@ -12,6 +13,7 @@ namespace FightingGame
     {
         private readonly Dictionary<string, GameState> _gameStates;
         private readonly GraphicsDeviceManager _graphics;
+        private readonly Dictionary<PlayerIndex, Player> _players = new Dictionary<PlayerIndex, Player>();
         private readonly Dictionary<string, SpriteSheet> _spriteSheets;
         private readonly Dictionary<string, Texture2D> _textures;
 
@@ -24,7 +26,8 @@ namespace FightingGame
             {
                 { "Menu", new MenuGameState(this) },
                 { "Options", new OptionsGameState(this) },
-                { "Play", new PlayGameState(this) }
+                { "Play", new PlayGameState(this) },
+                { "PlayerSelection", new PlayerSelectionGameState(this) }
             };
 
             _graphics = new GraphicsDeviceManager(this);
@@ -52,6 +55,14 @@ namespace FightingGame
             get
             {
                 return _gameStates;
+            }
+        }
+
+        public Dictionary<PlayerIndex, Player> Players
+        {
+            get
+            {
+                return _players;
             }
         }
 

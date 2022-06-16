@@ -53,7 +53,7 @@ namespace FightingGame.GameStates
 
         private void OnPlayButtonClick(object sender, EventArgs e)
         {
-            Game.ChangeGameState(Game.GameStates["Play"]);
+            Game.ChangeGameState(Game.GameStates["PlayerSelection"]);
         }
 
         private void OnSettingsButtonClick(object sender, EventArgs e)

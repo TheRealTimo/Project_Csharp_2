@@ -26,6 +26,8 @@ namespace FightingGame.GameComponents
         public Player(GameState gameState, Vector2 position) : base(gameState, position)
         {
             BoundingBox = new Rectangle(0, 0, 40, 40);
+
+            _sprite = new AnimatedSprite(GameState.Game.SpriteSheets["Player"]);
         }
 
         public int Health
@@ -139,13 +141,6 @@ namespace FightingGame.GameComponents
             }
 
             Position = new Vector2(Position.X, Position.Y - 1);
-        }
-
-        public override void LoadContent()
-        {
-            base.LoadContent();
-
-            _sprite = new AnimatedSprite(GameState.Game.SpriteSheets["Player"]);
         }
 
         public void Punch()
