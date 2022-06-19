@@ -1,4 +1,5 @@
-﻿using FightingGame.GameComponents;
+﻿using System;
+using FightingGame.GameComponents;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
@@ -8,11 +9,12 @@ namespace FightingGame.GameStates
     public class PlayerSelectionGameState : GameState
     {
         public PlayerSelectionGameState(FightingGame game) : base(game) { }
-
+     
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             base.Draw(gameTime, spriteBatch);
         }
+
 
         public override void Update(GameTime gameTime)
         {

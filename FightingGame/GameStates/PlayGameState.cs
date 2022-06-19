@@ -1,8 +1,10 @@
-﻿using FightingGame.GameComponents;
+﻿using System;
+using FightingGame.GameComponents;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
 namespace FightingGame.GameStates
 {
@@ -89,22 +91,20 @@ namespace FightingGame.GameStates
         {
             base.Update(gameTime);
 
+            
+
             foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
-                // GamePadState gamePadState = GamePad.GetState(keyValuePair.Key);
-                KeyboardState keyboardState = Keyboard.GetState();
+                GamePadCapabilities capabilities = GamePad.GetCapabilities(keyValuePair.Key);
+                GamePadState gstate = Gamepad.GetState(keyValuePair.Key);
 
-                // if (gamePadState.ThumbSticks.Left.X != 0)
-                if (keyboardState.IsKeyDown(Keys.Left) || keyboardState.IsKeyDown(Keys.Right))
+                if (capabilities.HasLeftXThumbStick && gstate.ThumbSticks.Left.X != 0)
                 {
-                    // if (gamePadState.ThumbSticks.Left.X < 0)
-                    if (keyboardState.IsKeyDown(Keys.Left))
+                    if (gstate.ThumbSticks.Left.X < 0)
                     {
                         keyValuePair.Value.RunLeft(gameTime);
                     }
-
-                    // if (gamePadState.ThumbSticks.Left.X > 0)
-                    if (keyboardState.IsKeyDown(Keys.Right))
+                    else if (gstate.ThumbSticks.Left.X > 0)
                     {
                         keyValuePair.Value.RunRight(gameTime);
                     }
@@ -114,14 +114,12 @@ namespace FightingGame.GameStates
                     keyValuePair.Value.Idle(gameTime);
                 }
 
-                // if (gamePadState.IsButtonDown(Buttons.A))
-                if (keyboardState.IsKeyDown(Keys.Up))
+                if (capabilities.HasAButton && gstate.IsButtonDown(Buttons.A))
                 {
                     keyValuePair.Value.Jump();
                 }
 
-                // if (gamePadState.IsButtonDown(Buttons.B))
-                if (keyboardState.IsKeyDown(Keys.Space))
+                if (capabilities.HasBButton && gstate.IsButtonDown(Buttons.B))
                 {
                     keyValuePair.Value.Punch();
                 }

@@ -4,12 +4,12 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/Block.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/Controls/OptionsButton.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/Controls/PlayButton.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/Controls/QuitButton.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/Player.png</File>
-    <File>C:/Users/rstob/Downloads/FightingGame (2)/Content/RedBackground.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/Block.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/Controls/OptionsButton.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/Controls/PlayButton.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/Controls/QuitButton.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/Player.png</File>
+    <File>C:/Users/Admin/Downloads/Project_Csharp_2-Rewrite/Project_Csharp_2-Rewrite/FightingGame/Content/RedBackground.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
