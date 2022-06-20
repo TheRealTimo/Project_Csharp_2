@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "pepWdP2dEZJ+narC+M6Yc+ID3qOCH/MenS2O6oAmzq7LKDc7pYfLrPasQUCOenNI0mYjQwo8ACQziW+2QPTxnQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\Downloads\\Project_Csharp_2-Rewrite\\Project_Csharp_2-Rewrite\\FightingGame\\FightingGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\monogame.extended\\3.8.0\\monogame.extended.3.8.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\monogame.extended.animations\\3.7.0\\monogame.extended.animations.3.7.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\monogame.extended.graphics\\3.8.0\\monogame.extended.graphics.3.8.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,49 @@
+{
+    "textureAtlas": {
+        "texture": "Player.png",
+        "regionWidth": 40,
+        "regionHeight": 40
+    },
+    "cycles": {
+        "IdleLeft": {
+            "frames": [ 71, 70, 69, 68, 67, 66, 65, 64, 63, 62, 61, 60 ],
+            "isLooping": true,
+            "frameDuration": 0.1
+        },
+        "IdleRight": {
+            "frames": [ 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59 ],
+            "isLooping": true,
+            "frameDuration": 0.1
+        },
+        "FallLeft": {
+            "frames": [ 81, 80, 79, 78, 77 ],
+            "isLooping": false,
+            "frameDuration": 0.1
+        },
+        "FallRight": {
+            "frames": [ 72, 73, 74, 75, 76 ],
+            "isLooping": false,
+            "frameDuration": 0.1
+        },
+        "RunLeft": {
+            "frames": [ 39, 38, 37, 36, 35, 34, 33, 32 ],
+            "isLooping": true,
+            "frameDuration": 0.1
+        },
+        "RunRight": {
+            "frames": [ 24, 25, 26, 27, 28, 29, 30, 31 ],
+            "isLooping": true,
+            "frameDuration": 0.1
+        },
+        "PunchLeft": {
+            "frames": [ 9, 8, 7, 6, 5 ],
+            "isLooping": false,
+            "frameDuration": 0.1
+        },
+        "PunchRight": {
+            "frames": [ 0, 1, 2, 3, 4 ],
+            "isLooping": false,
+            "frameDuration": 0.1
+        }
+    }
+}
