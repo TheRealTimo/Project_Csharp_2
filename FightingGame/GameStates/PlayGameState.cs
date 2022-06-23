@@ -92,6 +92,7 @@ namespace FightingGame.GameStates
         {
             base.Update(gameTime);
             int i = 0;
+            
 
             foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
@@ -102,9 +103,10 @@ namespace FightingGame.GameStates
                 {
                     continue;
                 }
+                
                 Game.ChangeGameState(Game.GameStates["EndGame"]);
+                Game.Players.Clear();
             }
-
             foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
                 GamePadCapabilities capabilities = GamePad.GetCapabilities(keyValuePair.Key);
