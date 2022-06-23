@@ -65,34 +65,34 @@ namespace FightingGame.GameStates
 
         private void OnOnePlayerClick(object sender, EventArgs e)
         {
-            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64)));
+            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64), 1));
 
             Game.ChangeGameState(Game.GameStates["Play"]);
         }
 
         private void OnTwoPlayerClick(object sender, EventArgs e)
         {
-            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64)));
-            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64)));
+            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64), 1));
+            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64), 2));
 
             Game.ChangeGameState(Game.GameStates["Play"]);
         }
 
         private void OnThreePlayerClick(object sender, EventArgs e)
         {
-            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64)));
-            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64)));
-            Game.Players.Add(PlayerIndex.Three, new Player(Game.GameStates["Play"], new Vector2(32 * 15, 64)));
+            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64), 1));
+            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64), 2));
+            Game.Players.Add(PlayerIndex.Three, new Player(Game.GameStates["Play"], new Vector2(32 * 15, 64), 3));
 
             Game.ChangeGameState(Game.GameStates["Play"]);
         }
 
         private void OnFourPlayerClick(object sender, EventArgs e)
         {
-            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64)));
-            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64)));
-            Game.Players.Add(PlayerIndex.Three, new Player(Game.GameStates["Play"], new Vector2(32 * 15, 64)));
-            Game.Players.Add(PlayerIndex.Four, new Player(Game.GameStates["Play"], new Vector2(32 * 20, 64)));
+            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64), 1));
+            Game.Players.Add(PlayerIndex.Two, new Player(Game.GameStates["Play"], new Vector2(32 * 10, 64), 2));
+            Game.Players.Add(PlayerIndex.Three, new Player(Game.GameStates["Play"], new Vector2(32 * 15, 64), 3));
+            Game.Players.Add(PlayerIndex.Four, new Player(Game.GameStates["Play"], new Vector2(32 * 20, 64), 4));
 
             Game.ChangeGameState(Game.GameStates["Play"]);
         }

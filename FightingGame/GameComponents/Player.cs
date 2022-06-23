@@ -11,6 +11,8 @@ namespace FightingGame.GameComponents
     {
         private int _attackCooldown = 0;
 
+        public int playerIndex;
+
         private Vector2 _direction = new Vector2(0, 0);
         private Vector2 _gravity = new Vector2(0, 2000);
 
@@ -23,9 +25,11 @@ namespace FightingGame.GameComponents
         private Vector2 _velocityFriction = new Vector2(4000, 0);
         private Vector2 _velocityMaximum = new Vector2(400, 2000);
 
-        public Player(GameState gameState, Vector2 position) : base(gameState, position)
+        public Player(GameState gameState, Vector2 position, int playerIndex) : base(gameState, position)
         {
             BoundingBox = new Rectangle(0, 0, 40, 40);
+
+            this.playerIndex = playerIndex;
 
             _sprite = new AnimatedSprite(GameState.Game.SpriteSheets["Player"]);
         }
@@ -263,22 +267,22 @@ namespace FightingGame.GameComponents
         private void DrawHealthbar(SpriteBatch spriteBatch)
         {
             int width = 100;
-            int height = 10;
+            int height = 25;
 
-            int offsetY = 10;
+            //int offsetY = 10;
 
             Rectangle background = new Rectangle
             {
-                X = (int) Position.X - (width / 2) + (BoundingBox.Width / 2),
-                Y = (int) Position.Y - height - offsetY,
+                X = 150 + (500 * (playerIndex - 1)),
+                Y = 100,
                 Width = width,
                 Height = height
             };
 
             Rectangle foreground = new Rectangle
             {
-                X = (int) Position.X - (width / 2) + (BoundingBox.Width / 2),
-                Y = (int) Position.Y - height - offsetY,
+                X = 150 + (500 * (playerIndex - 1)),
+                Y = 100,
                 Width = _health,
                 Height = height
             };

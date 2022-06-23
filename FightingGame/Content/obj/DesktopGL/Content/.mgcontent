@@ -4,17 +4,17 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Block.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/BackButton.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/FourPlayer.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/OnePlayer.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/OptionsButton.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/PlayButton.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/ThreePlayer.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Player.png</File>
-    <File>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/RedBackground.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Block.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/BackButton.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/FourPlayer.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OnePlayer.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OptionsButton.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/PlayButton.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/ThreePlayer.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Player.png</File>
+    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/RedBackground.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
