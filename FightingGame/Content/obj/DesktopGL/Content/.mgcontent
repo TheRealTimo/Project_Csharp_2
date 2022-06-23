@@ -4,25 +4,25 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Block.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/BackButton.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/FourPlayer.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OnePlayer.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OptionsButton.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/PlayButton.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/ThreePlayer.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Player.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount1.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount2.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount3.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount4.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart1.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart2.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart3.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart4.png</File>
-    <File>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/RedBackground.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Block.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/BackButton.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/FourPlayer.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OnePlayer.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/OptionsButton.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/PlayButton.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/ThreePlayer.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Player.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount1.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount2.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount3.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerCount4.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart1.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart2.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart3.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/PlayerHeart4.png</File>
+    <File>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/RedBackground.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

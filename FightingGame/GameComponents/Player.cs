@@ -256,9 +256,9 @@ namespace FightingGame.GameComponents
 
             if (_health <= 0)
             {
-                _health = 100;
+                
 
-                Position = new Vector2(32, 32);
+                Position = new Vector2(0, 0);
             }
 
             UpdateAnimation(gameTime);

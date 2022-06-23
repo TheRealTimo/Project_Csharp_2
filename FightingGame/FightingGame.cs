@@ -27,7 +27,8 @@ namespace FightingGame
                 { "Menu", new MenuGameState(this) },
                 { "Options", new OptionsGameState(this) },
                 { "Play", new PlayGameState(this) },
-                { "PlayerSelection", new PlayerSelectionGameState(this) }
+                { "PlayerSelection", new PlayerSelectionGameState(this) },
+                { "EndGame", new EndGameState(this) }
             };
 
             _graphics = new GraphicsDeviceManager(this);

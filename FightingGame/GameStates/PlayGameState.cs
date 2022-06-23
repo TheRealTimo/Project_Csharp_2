@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace FightingGame.GameStates
 {
@@ -90,8 +91,19 @@ namespace FightingGame.GameStates
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
+            int i = 0;
 
-            
+            foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
+            {
+                int amount_ = Game.Players.Count();
+                if (keyValuePair.Value.Health == 0) i++;
+
+                if (i != amount_ - 1)
+                {
+                    continue;
+                }
+                Game.ChangeGameState(Game.GameStates["EndGame"]);
+            }
 
             foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
