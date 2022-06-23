@@ -140,6 +140,14 @@ namespace FightingGame
             _textures.Add("ThreePlayer", Content.Load<Texture2D>("Controls/ThreePlayer"));
             _textures.Add("FourPlayer", Content.Load<Texture2D>("Controls/FourPlayer"));
             _textures.Add("BackButton", Content.Load<Texture2D>("Controls/BackButton"));
+            _textures.Add("PlayerHeart1", Content.Load<Texture2D>("PlayerHeart1"));
+            _textures.Add("PlayerHeart2", Content.Load<Texture2D>("PlayerHeart2"));
+            _textures.Add("PlayerHeart3", Content.Load<Texture2D>("PlayerHeart3"));
+            _textures.Add("PlayerHeart4", Content.Load<Texture2D>("PlayerHeart4"));
+            _textures.Add("PlayerCount1", Content.Load<Texture2D>("PlayerCount1"));
+            _textures.Add("PlayerCount2", Content.Load<Texture2D>("PlayerCount2"));
+            _textures.Add("PlayerCount3", Content.Load<Texture2D>("PlayerCount3"));
+            _textures.Add("PlayerCount4", Content.Load<Texture2D>("PlayerCount4"));
 
 
             _textures.Add("Block", Content.Load<Texture2D>("Block"));

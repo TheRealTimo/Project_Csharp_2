@@ -203,3 +203,11 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcorea
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.dll
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.pdb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.genruntimeconfig.cache
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart1.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart2.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart3.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart4.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount1.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount2.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount3.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount4.xnb

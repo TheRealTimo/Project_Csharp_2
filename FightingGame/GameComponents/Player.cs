@@ -269,26 +269,31 @@ namespace FightingGame.GameComponents
             int width = 100;
             int height = 25;
 
-            //int offsetY = 10;
+            spriteBatch.Draw(GameState.Game.Textures["PlayerCount" + playerIndex], new Vector2(BoundingBox.X, BoundingBox.Y), new Color(255, 255, 255));
+
+            int x = 150 + (500 * (playerIndex - 1));
+            int y = 100;
 
             Rectangle background = new Rectangle
             {
-                X = 150 + (500 * (playerIndex - 1)),
-                Y = 100,
+                X = x,
+                Y = y,
                 Width = width,
                 Height = height
             };
 
             Rectangle foreground = new Rectangle
             {
-                X = 150 + (500 * (playerIndex - 1)),
-                Y = 100,
+                X = x,
+                Y = y,
                 Width = _health,
                 Height = height
             };
 
             spriteBatch.FillRectangle(background, new Color(255, 255, 255));
             spriteBatch.FillRectangle(foreground, new Color(0, 128, 0));
+
+            spriteBatch.Draw(GameState.Game.Textures["PlayerHeart" + playerIndex], new Vector2(x - 32, y - 16), new Color(255, 255, 255));
         }
 
         private void UpdateAnimation(GameTime gameTime)
