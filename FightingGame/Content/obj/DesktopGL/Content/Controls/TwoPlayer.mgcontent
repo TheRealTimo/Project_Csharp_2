@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</SourceFile>
-  <SourceTime>2022-06-23T20:27:25.0408866+02:00</SourceTime>
-  <DestFile>C:/Users/sim/Documents/GitHub/Project_Csharp_2/FightingGame/Content/bin/DesktopGL/Content/Controls/TwoPlayer.xnb</DestFile>
-  <DestTime>2022-06-23T20:29:03.4792669+02:00</DestTime>
+  <SourceFile>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/TwoPlayer.png</SourceFile>
+  <SourceTime>2022-06-23T10:08:20.5351507+02:00</SourceTime>
+  <DestFile>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/bin/DesktopGL/Content/Controls/TwoPlayer.xnb</DestFile>
+  <DestTime>2022-06-24T11:27:24.4143753+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

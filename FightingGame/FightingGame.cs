@@ -120,7 +120,7 @@ namespace FightingGame
             _graphics.PreferredBackBufferWidth = 1920; // GraphicsDevice.DisplayMode.Width;
             _graphics.PreferredBackBufferHeight = 1080; // GraphicsDevice.DisplayMode.Height;
 
-            _graphics.IsFullScreen = false;
+            _graphics.IsFullScreen = true;
 
             _graphics.ApplyChanges();
         }
@@ -152,6 +152,11 @@ namespace FightingGame
 
 
             _textures.Add("Block", Content.Load<Texture2D>("Block"));
+            _textures.Add("Wood", Content.Load<Texture2D>("Wood"));
+            _textures.Add("Dirt", Content.Load<Texture2D>("Dirt"));
+            _textures.Add("Spike", Content.Load<Texture2D>("Spike"));
+            //_textures.Add("Lava", Content.Load<Texture2D>("Lava"));
+            _textures.Add("Brick", Content.Load<Texture2D>("Brick"));
             _textures.Add("Player", Content.Load<Texture2D>("Player"));
 
             foreach (GameState gameState in _gameStates.Values)

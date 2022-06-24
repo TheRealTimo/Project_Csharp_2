@@ -125,7 +125,7 @@ namespace FightingGame.GameComponents
 
         public void Jump()
         {
-            List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);
+            List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);            
 
             Position = new Vector2(Position.X, Position.Y + 1);
 
@@ -188,8 +188,10 @@ namespace FightingGame.GameComponents
             float delta = (float) gameTime.ElapsedGameTime.TotalSeconds;
 
             List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);
+            List<GameComponent> spikes = GameState.GameComponents.FindAll(gameComponent => gameComponent is Spike);
+           
 
-			_velocity.X += (Math.Min(Math.Abs(_gravity.X) * delta, _velocityMaximum.X)) * Math.Sign(_gravity.X);
+            _velocity.X += (Math.Min(Math.Abs(_gravity.X) * delta, _velocityMaximum.X)) * Math.Sign(_gravity.X);
 			_velocity.Y += (Math.Min(Math.Abs(_gravity.Y) * delta, _velocityMaximum.Y)) * Math.Sign(_gravity.Y);
 
             if (_velocity.X != 0)
@@ -213,8 +215,16 @@ namespace FightingGame.GameComponents
                             collision = true;
                         }
                     }
+           /*         foreach (GameComponent spike in spikes)
+                    {
+                        if (spike.BoundingBox.Intersects(BoundingBox))
+                        {
+                            collision = true;
+                            ((Player) player).Health -= 1;
+                        }
+*/
 
-                    if (collision)
+                        if (collision)
                     {
                         Position = new Vector2(Position.X - pixels * Math.Sign(_velocity.X), Position.Y);
 

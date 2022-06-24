@@ -263,3 +263,7 @@ C:\Users\sim\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp
 C:\Users\sim\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.dll
 C:\Users\sim\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.pdb
 C:\Users\sim\Documents\GitHub\Project_Csharp_2\FightingGame\obj\Debug\netcoreapp3.1\FightingGame.genruntimeconfig.cache
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Brick.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Wood.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Dirt.xnb
+C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Spike.xnb
