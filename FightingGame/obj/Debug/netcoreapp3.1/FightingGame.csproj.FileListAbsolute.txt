@@ -267,3 +267,15 @@ C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcorea
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Wood.xnb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Dirt.xnb
 C:\Users\rstob\Documents\GitHub\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Spike.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Brick.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Dirt.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount1.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount2.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount3.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerCount4.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart1.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart2.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart3.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\PlayerHeart4.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Spike.xnb
+C:\Users\Admin\Desktop\Project_Csharp_2\FightingGame\bin\Debug\netcoreapp3.1\Content\Wood.xnb

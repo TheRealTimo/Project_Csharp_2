@@ -9,7 +9,6 @@ namespace FightingGame.GameStates
 {
     public class PlayerSelectionGameState : GameState
     {
-        private readonly Button _onePlayer;
         private readonly Button _twoPlayer;
         private readonly Button _threePlayer;
         private readonly Button _fourPlayer;
@@ -18,19 +17,16 @@ namespace FightingGame.GameStates
 
         public PlayerSelectionGameState(FightingGame game) : base(game)
         {
-            _onePlayer = new Button(this, new Vector2(447, 392), new Rectangle(0, 0, 413, 98));
-            _twoPlayer = new Button(this, new Vector2(1060, 392), new Rectangle(0, 0, 413, 98));
-            _threePlayer = new Button(this, new Vector2(447, 492), new Rectangle(0, 0, 413, 98));
-            _fourPlayer = new Button(this, new Vector2(1060, 492), new Rectangle(0, 0, 413, 98));
-            _backButton = new Button(this, new Vector2(753, 750), new Rectangle(0, 0, 413, 98));
+            _twoPlayer = new Button(this, new Vector2(754, 270), new Rectangle(0, 0, 413, 98));
+            _threePlayer = new Button(this, new Vector2(754, 405), new Rectangle(0, 0, 413, 98));
+            _fourPlayer = new Button(this, new Vector2(754, 540), new Rectangle(0, 0, 413, 98));
+            _backButton = new Button(this, new Vector2(754, 675), new Rectangle(0, 0, 413, 98));
 
-            _onePlayer.OnClick += OnOnePlayerClick;
             _twoPlayer.OnClick += OnTwoPlayerClick;
             _threePlayer.OnClick += OnThreePlayerClick;
             _fourPlayer.OnClick += OnFourPlayerClick;
             _backButton.OnClick += OnBackButtonClick;
 
-            GameComponents.Add(_onePlayer);
             GameComponents.Add(_twoPlayer);
             GameComponents.Add(_threePlayer);
             GameComponents.Add(_fourPlayer);
@@ -43,7 +39,6 @@ namespace FightingGame.GameStates
         {
             base.LoadContent();
 
-            _onePlayer.Texture = Game.Textures["OnePlayer"];
             _twoPlayer.Texture = Game.Textures["TwoPlayer"];
             _threePlayer.Texture = Game.Textures["ThreePlayer"];
             _fourPlayer.Texture = Game.Textures["FourPlayer"];
@@ -63,12 +58,7 @@ namespace FightingGame.GameStates
             base.Update(gameTime);
         }
 
-        private void OnOnePlayerClick(object sender, EventArgs e)
-        {
-            Game.Players.Add(PlayerIndex.One, new Player(Game.GameStates["Play"], new Vector2(32 * 5, 64), 1));
-
-            Game.ChangeGameState(Game.GameStates["Play"]);
-        }
+       
 
         private void OnTwoPlayerClick(object sender, EventArgs e)
         {

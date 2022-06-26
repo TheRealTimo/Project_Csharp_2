@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</SourceFile>
-  <SourceTime>2022-06-13T20:58:56+02:00</SourceTime>
-  <DestFile>C:/Users/rstob/Documents/GitHub/Project_Csharp_2/FightingGame/Content/bin/DesktopGL/Content/Controls/QuitButton.xnb</DestFile>
-  <DestTime>2022-06-24T11:27:24.400372+02:00</DestTime>
+  <SourceFile>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/Controls/QuitButton.png</SourceFile>
+  <SourceTime>2022-06-20T11:33:26.2489755+02:00</SourceTime>
+  <DestFile>C:/Users/Admin/Desktop/Project_Csharp_2/FightingGame/Content/bin/DesktopGL/Content/Controls/QuitButton.xnb</DestFile>
+  <DestTime>2022-06-26T13:59:12.5651192+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T18:17:54+02:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
