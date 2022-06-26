@@ -27,7 +27,8 @@ namespace FightingGame
                 { "Menu", new MenuGameState(this) },
                 { "Options", new OptionsGameState(this) },
                 { "Play", new PlayGameState(this) },
-                { "PlayerSelection", new PlayerSelectionGameState(this) }
+                { "PlayerSelection", new PlayerSelectionGameState(this) },
+                { "EndGame", new EndGameState(this) }
             };
 
             _graphics = new GraphicsDeviceManager(this);
@@ -119,7 +120,7 @@ namespace FightingGame
             _graphics.PreferredBackBufferWidth = 1920; // GraphicsDevice.DisplayMode.Width;
             _graphics.PreferredBackBufferHeight = 1080; // GraphicsDevice.DisplayMode.Height;
 
-            _graphics.IsFullScreen = false;
+            _graphics.IsFullScreen = true;
 
             _graphics.ApplyChanges();
         }
@@ -135,8 +136,26 @@ namespace FightingGame
             _textures.Add("OptionsButton", Content.Load<Texture2D>("Controls/OptionsButton"));
             _textures.Add("PlayButton", Content.Load<Texture2D>("Controls/PlayButton"));
             _textures.Add("QuitButton", Content.Load<Texture2D>("Controls/QuitButton"));
+            _textures.Add("TwoPlayer", Content.Load<Texture2D>("Controls/TwoPlayer"));
+            _textures.Add("ThreePlayer", Content.Load<Texture2D>("Controls/ThreePlayer"));
+            _textures.Add("FourPlayer", Content.Load<Texture2D>("Controls/FourPlayer"));
+            _textures.Add("BackButton", Content.Load<Texture2D>("Controls/BackButton"));
+            _textures.Add("PlayerHeart1", Content.Load<Texture2D>("PlayerHeart1"));
+            _textures.Add("PlayerHeart2", Content.Load<Texture2D>("PlayerHeart2"));
+            _textures.Add("PlayerHeart3", Content.Load<Texture2D>("PlayerHeart3"));
+            _textures.Add("PlayerHeart4", Content.Load<Texture2D>("PlayerHeart4"));
+            _textures.Add("PlayerCount1", Content.Load<Texture2D>("PlayerCount1"));
+            _textures.Add("PlayerCount2", Content.Load<Texture2D>("PlayerCount2"));
+            _textures.Add("PlayerCount3", Content.Load<Texture2D>("PlayerCount3"));
+            _textures.Add("PlayerCount4", Content.Load<Texture2D>("PlayerCount4"));
+
 
             _textures.Add("Block", Content.Load<Texture2D>("Block"));
+            _textures.Add("Wood", Content.Load<Texture2D>("Wood"));
+            _textures.Add("Dirt", Content.Load<Texture2D>("Dirt"));
+            _textures.Add("Spike", Content.Load<Texture2D>("Spike"));
+            //_textures.Add("Lava", Content.Load<Texture2D>("Lava"));
+            _textures.Add("Brick", Content.Load<Texture2D>("Brick"));
             _textures.Add("Player", Content.Load<Texture2D>("Player"));
 
             foreach (GameState gameState in _gameStates.Values)

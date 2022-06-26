@@ -11,6 +11,8 @@ namespace FightingGame.GameComponents
     {
         private int _attackCooldown = 0;
 
+        public int playerIndex;
+
         private Vector2 _direction = new Vector2(0, 0);
         private Vector2 _gravity = new Vector2(0, 2000);
 
@@ -23,9 +25,11 @@ namespace FightingGame.GameComponents
         private Vector2 _velocityFriction = new Vector2(4000, 0);
         private Vector2 _velocityMaximum = new Vector2(400, 2000);
 
-        public Player(GameState gameState, Vector2 position) : base(gameState, position)
+        public Player(GameState gameState, Vector2 position, int playerIndex) : base(gameState, position)
         {
             BoundingBox = new Rectangle(0, 0, 40, 40);
+
+            this.playerIndex = playerIndex;
 
             _sprite = new AnimatedSprite(GameState.Game.SpriteSheets["Player"]);
         }
@@ -121,7 +125,7 @@ namespace FightingGame.GameComponents
 
         public void Jump()
         {
-            List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);
+            List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);            
 
             Position = new Vector2(Position.X, Position.Y + 1);
 
@@ -184,8 +188,10 @@ namespace FightingGame.GameComponents
             float delta = (float) gameTime.ElapsedGameTime.TotalSeconds;
 
             List<GameComponent> blocks = GameState.GameComponents.FindAll(gameComponent => gameComponent is Block);
+            List<GameComponent> spikes = GameState.GameComponents.FindAll(gameComponent => gameComponent is Spike);
+           
 
-			_velocity.X += (Math.Min(Math.Abs(_gravity.X) * delta, _velocityMaximum.X)) * Math.Sign(_gravity.X);
+            _velocity.X += (Math.Min(Math.Abs(_gravity.X) * delta, _velocityMaximum.X)) * Math.Sign(_gravity.X);
 			_velocity.Y += (Math.Min(Math.Abs(_gravity.Y) * delta, _velocityMaximum.Y)) * Math.Sign(_gravity.Y);
 
             if (_velocity.X != 0)
@@ -209,8 +215,16 @@ namespace FightingGame.GameComponents
                             collision = true;
                         }
                     }
+           /*         foreach (GameComponent spike in spikes)
+                    {
+                        if (spike.BoundingBox.Intersects(BoundingBox))
+                        {
+                            collision = true;
+                            ((Player) player).Health -= 1;
+                        }
+*/
 
-                    if (collision)
+                        if (collision)
                     {
                         Position = new Vector2(Position.X - pixels * Math.Sign(_velocity.X), Position.Y);
 
@@ -252,9 +266,9 @@ namespace FightingGame.GameComponents
 
             if (_health <= 0)
             {
-                _health = 100;
+                
 
-                Position = new Vector2(32, 32);
+                Position = new Vector2(0, 0);
             }
 
             UpdateAnimation(gameTime);
@@ -263,28 +277,33 @@ namespace FightingGame.GameComponents
         private void DrawHealthbar(SpriteBatch spriteBatch)
         {
             int width = 100;
-            int height = 10;
+            int height = 25;
 
-            int offsetY = 10;
+            spriteBatch.Draw(GameState.Game.Textures["PlayerCount" + playerIndex], new Vector2(BoundingBox.X, BoundingBox.Y), new Color(255, 255, 255));
+
+            int x = 150 + (500 * (playerIndex - 1));
+            int y = 100;
 
             Rectangle background = new Rectangle
             {
-                X = (int) Position.X - (width / 2) + (BoundingBox.Width / 2),
-                Y = (int) Position.Y - height - offsetY,
+                X = x,
+                Y = y,
                 Width = width,
                 Height = height
             };
 
             Rectangle foreground = new Rectangle
             {
-                X = (int) Position.X - (width / 2) + (BoundingBox.Width / 2),
-                Y = (int) Position.Y - height - offsetY,
+                X = x,
+                Y = y,
                 Width = _health,
                 Height = height
             };
 
             spriteBatch.FillRectangle(background, new Color(255, 255, 255));
             spriteBatch.FillRectangle(foreground, new Color(0, 128, 0));
+
+            spriteBatch.Draw(GameState.Game.Textures["PlayerHeart" + playerIndex], new Vector2(x - 32, y - 16), new Color(255, 255, 255));
         }
 
         private void UpdateAnimation(GameTime gameTime)
