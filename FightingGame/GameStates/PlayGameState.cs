@@ -123,6 +123,8 @@ namespace FightingGame.GameStates
                 Game.ChangeGameState(Game.GameStates["EndGame"]);
                 Game.Players.Clear();
             }
+
+
             foreach (KeyValuePair<PlayerIndex, Player> keyValuePair in Game.Players)
             {
                 GamePadCapabilities capabilities = GamePad.GetCapabilities(keyValuePair.Key);
@@ -153,6 +155,13 @@ namespace FightingGame.GameStates
                 {
                     keyValuePair.Value.Punch();
                 }
+            }
+
+            KeyboardState keyboardState = Keyboard.GetState();
+            if (keyboardState.IsKeyDown(Keys.Escape))
+            {
+                Game.ChangeGameState(Game.GameStates["EndGame"]);
+                Game.Players.Clear();
             }
         }
     }
